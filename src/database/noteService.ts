@@ -31,3 +31,23 @@ export const deleteNote = (id: number) => {
     [id],
   );
 };
+
+export const getNoteById = (id: number): NoteType => {
+  return db.getFirstSync(
+    `
+    SELECT * FROM notes where id = ?
+    `,
+    [id],
+  ) as NoteType;
+};
+
+export const updateNote = (id: number, title: string, description: string) => {
+  return db.runSync(
+    `
+    UPDATE notes
+    SET title = ? , description = ?
+    WHERE id = ?
+  `,
+    [title, description, id],
+  );
+};

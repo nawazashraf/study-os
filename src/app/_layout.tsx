@@ -7,10 +7,15 @@ initDB();
 export default function RootLayout() {
   return (
     <Stack
-      screenOptions={{ headerShown: false, animation: "slide_from_right" }}
+      screenOptions={{
+        headerShown: false,
+        animation: "slide_from_right",
+        contentStyle: {
+          backgroundColor: "#252525",
+        },
+      }}
     >
       <Stack.Screen name="(tabs)" />
-      <Stack.Screen name="note-edit" />
     </Stack>
   );
 }

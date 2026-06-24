@@ -15,7 +15,7 @@ import {
   useSafeAreaInsets,
 } from "react-native-safe-area-context";
 
-export default function NoteEdit() {
+export default function AddNote() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
 
@@ -39,7 +39,7 @@ export default function NoteEdit() {
 
       createNote(title, note.description.trim());
 
-      router.replace("/note");
+      router.back();
     } catch (error) {
       console.error("Something went wrong while saving note", error);
     }
