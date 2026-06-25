@@ -1,18 +1,23 @@
+import AttendanceBottomSheet from "@/components/routine/AttendanceBottomSheet";
 import { AttendanceCard } from "@/components/routine/AttendanceCard";
 import { ClassesCard } from "@/components/routine/ClassesCard";
 import { RoutineList } from "@/components/routine/RoutineList";
 import { RoutineWeek } from "@/components/routine/RoutineWeek";
 import { routine } from "@/data/routine";
+import { useAttendance } from "@/hooks/useAttendance";
 import { getCurrentWeek } from "@/utils/generateCurrentWeek";
 import { getFormattedDate } from "@/utils/getFormattedDate";
 import { getGreeting } from "@/utils/getGreeting";
 import { Ionicons } from "@expo/vector-icons";
-import { useState } from "react";
+import BottomSheet from "@gorhom/bottom-sheet";
+import { useRef, useState } from "react";
 import { Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const Routine = () => {
+    
   const userName = "Nawaz";
+  const bottomSheetRef = useRef<BottomSheet>(null);
 
   const currentWeek = getCurrentWeek();
 
@@ -21,50 +26,78 @@ const Routine = () => {
   );
 
   const day = selectedDate
-    .toLocaleDateString("en-US", {
-      weekday: "long",
-    })
+    .toLocaleDateString("en-US", { weekday: "long" })
     .toLowerCase() as keyof typeof routine;
 
   const classes = routine[day] ?? [];
 
+  const [selectedClass, setSelectedClass] = useState<
+    (typeof classes)[number] | null
+  >(null);
+
+  const attendanceDate = selectedDate.toISOString().split("T")[0];
+
+  const attendance = useAttendance(attendanceDate);
+
   return (
-    <SafeAreaView edges={["top"]} style={{ flex: 1 }}>
-      <View className="flex-1 bg-background px-4">
-        {/* Header */}
-        <View>
-          <Text className="mt-4 text-white text-4xl font-bold tracking-tight">
-            {getGreeting() + ","}
-          </Text>
+    <View style={{ flex: 1 }}>
+      <SafeAreaView edges={["top"]} style={{ flex: 1 }}>
+        <View className="flex-1 bg-background px-4">
+          {/* Header */}
 
-          <Text className="text-primary font-bold text-3xl">{userName}</Text>
+          <View>
+            <Text className="mt-4 text-4xl font-bold tracking-tight text-white">
+              {getGreeting()},
+            </Text>
 
-          <View className="flex-row gap-x-2 mt-1">
-            <Ionicons name="calendar-outline" color="white" size={16} />
-            <Text className="text-muted font-bold">{getFormattedDate()}</Text>
+            <Text className="text-3xl font-bold text-primary">{userName}</Text>
+
+            <View className="mt-1 flex-row gap-x-2">
+              <Ionicons name="calendar-outline" color="white" size={16} />
+
+              <Text className="font-bold text-muted">{getFormattedDate()}</Text>
+            </View>
+
+            <View className="mt-4 flex-row justify-between gap-x-2">
+              <ClassesCard
+                selectedDate={selectedDate}
+                attendance={attendance}
+              />
+
+              <AttendanceCard attendance={attendance} />
+            </View>
           </View>
 
-          <View className="flex-row mt-4 gap-x-2 justify-between">
-            <ClassesCard selectedDate={selectedDate} />
-            <AttendanceCard />
+          {/* Week */}
+
+          <View className="mt-6">
+            <RoutineWeek
+              week={currentWeek}
+              selectedDate={selectedDate}
+              onSelect={setSelectedDate}
+            />
+          </View>
+
+          {/* Routine */}
+
+          <View className="flex-1">
+            <RoutineList
+              classes={classes}
+              onClassPress={(item) => {
+                setSelectedClass(item);
+                bottomSheetRef.current?.snapToIndex(0);
+              }}
+            />
           </View>
         </View>
+      </SafeAreaView>
 
-        {/* Week Selector */}
-        <View className="mt-6">
-          <RoutineWeek
-            week={currentWeek}
-            selectedDate={selectedDate}
-            onSelect={setSelectedDate}
-          />
-        </View>
-
-        {/* Scrollable Class List */}
-        <View className="flex-1">
-          <RoutineList classes={classes} />
-        </View>
-      </View>
-    </SafeAreaView>
+      <AttendanceBottomSheet
+        ref={bottomSheetRef}
+        routineClass={selectedClass}
+        attendance={attendance}
+      />
+    </View>
   );
 };
 

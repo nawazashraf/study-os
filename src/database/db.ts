@@ -1,3 +1,5 @@
 import * as SQLite from "expo-sqlite";
 
-export const db = SQLite.openDatabaseSync("studyos.db")
+export const db = SQLite.openDatabaseSync("studyos.db");
+
+

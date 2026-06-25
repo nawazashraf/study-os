@@ -1,7 +1,7 @@
 import { RoutineListProps } from "@/types/routine/routine-list";
-import { FlatList, Text, View } from "react-native";
+import { FlatList, Pressable, Text, View } from "react-native";
 
-export const RoutineList = ({ classes }: RoutineListProps) => {
+export const RoutineList = ({ classes, onClassPress }: RoutineListProps) => {
   return (
     <FlatList
       data={classes}
@@ -10,7 +10,8 @@ export const RoutineList = ({ classes }: RoutineListProps) => {
       contentContainerStyle={{ paddingBottom: 24 }}
       showsVerticalScrollIndicator={false}
       renderItem={({ item }) => (
-        <View
+        <Pressable
+          onPress={() => onClassPress(item)}
           className={`bg-surface my-3 px-6 py-3 rounded-2xl min-h-28 flex justify-center`}
         >
           <View className="flex-row justify-between">
@@ -27,7 +28,7 @@ export const RoutineList = ({ classes }: RoutineListProps) => {
               {item.teacher && "Prof : "} {item.teacher}
             </Text>
           </View>
-        </View>
+        </Pressable>
       )}
     />
   );

@@ -1,27 +1,40 @@
 import { Attendance } from "@/types/attendance";
 import { db } from "./db";
 
-export const markAttennace = (
+export const markAttendance = (
   date: string,
   routineId: number,
   status: "present" | "absent",
 ) => {
   db.runSync(
     `
-        INSERT OR REPLACE INTO attendance
-        (date,routineId,status) 
-        VALUES(?,?,?)
-        `,
+    INSERT OR REPLACE INTO attendance
+    (date, routineId, status)
+    VALUES (?, ?, ?)
+    `,
     [date, routineId, status],
+  );
+};
+
+export const getAttendance = (date: string, routineId: number) => {
+  return db.getFirstSync<Attendance>(
+    `
+    SELECT *
+    FROM attendance
+    WHERE date = ?
+      AND routineId = ?
+    `,
+    [date, routineId],
   );
 };
 
 export const getAttendanceByDate = (date: string) => {
   return db.getAllSync<Attendance>(
     `
-        SELECT * FROM attendance
-        WHERE date = ?
-        `,
+    SELECT *
+    FROM attendance
+    WHERE date = ?
+    `,
     [date],
   );
 };
@@ -29,18 +42,13 @@ export const getAttendanceByDate = (date: string) => {
 export const getOverallAttendance = () => {
   const attendance = db.getAllSync<Attendance>(`SELECT * FROM attendance`);
 
-  const conducted = attendance.filter(
-    (a) => a.status === "present" || a.status === "absent",
-  );
+  const conducted = attendance.length;
 
-  const present = conducted.filter((a) => a.status === "present");
+  const present = attendance.filter((a) => a.status === "present").length;
 
   return {
-    present: present.length,
-    conducted: conducted.length,
-    percentage:
-      conducted.length === 0
-        ? 0
-        : Math.round((present.length / conducted.length) * 100),
+    present,
+    conducted,
+    percentage: conducted === 0 ? 0 : Math.round((present / conducted) * 100),
   };
 };
