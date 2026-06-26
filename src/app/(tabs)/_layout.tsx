@@ -21,6 +21,19 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
+        name="assignment"
+        options={{
+          title: "Assignment",
+          tabBarIcon: ({ color, size, focused }) => (
+            <Ionicons
+              name={focused ? "document-text" : "document-text-outline"}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="routine"
         options={{
           title: "Routine",
