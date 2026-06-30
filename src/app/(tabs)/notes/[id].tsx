@@ -69,7 +69,10 @@ const EditNote = () => {
           <View className="flex-row items-center justify-between py-3">
             <Pressable
               accessibilityLabel="Go back"
-              onPress={() => router.back()}
+              onPress={() => {
+                if (router.canGoBack && router.canGoBack()) router.back();
+                else router.replace("/(tabs)/notes");
+              }}
               className="h-10 w-10 rounded-full bg-surface items-center justify-center"
             >
               <Ionicons name="arrow-back" size={20} color="white" />

@@ -1,9 +1,9 @@
+import ShareHandler from "@/components/share/ShareHandler";
 import { initDB } from "@/database/init";
 import { Stack } from "expo-router";
 import { ShareIntentProvider } from "expo-share-intent";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import "../global.css";
-import ShareHandler from "@/components/share/ShareHandler";
 
 initDB();
 
@@ -22,6 +22,8 @@ export default function RootLayout() {
           }}
         >
           <Stack.Screen name="(tabs)" />
+          <Stack.Screen name="activity" />
+          {/* <Stack.Screen name="syllabus" /> */}
         </Stack>
       </ShareIntentProvider>
     </GestureHandlerRootView>

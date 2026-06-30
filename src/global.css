@@ -4,8 +4,10 @@
 @theme {
   --color-background: #131313;
   --color-surface: #303030;
+  --color-card: #1f1f1f;
   --color-primary: #3b82f6;
   --color-text: #ffffff;
+  --color-text-secondary: #cbd5e1;
   --color-muted: #9ca3af;
   --color-success: #22c55e;
   --color-danger: #ef4444;

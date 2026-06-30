@@ -1,0 +1,2356 @@
+{
+  "version": 1,
+  "semester": 5,
+  "program": "B.Tech IT",
+  "year": "3rd Year",
+  "generatedFor": "StudyOS",
+  "offline": true,
+  "subjects": [
+    {
+      "id": "dbms",
+      "code": "IT501",
+      "name": "Database Management System",
+      "type": "theory",
+      "category": "Major",
+      "credits": 3,
+      "studyHours": 36,
+      "weeklyHours": { "L": 3, "T": 0, "P": 0, "total": 3 },
+      "icon": "database-outline",
+      "color": "#4F8EF7",
+      "prerequisites": [
+        "Logic of programming language",
+        "Basic concepts of data structure and algorithms"
+      ],
+      "objectives": "To develop conceptual understanding of database management system for solving different industry level problems & to learn its applications.",
+      "outcomes": [
+        {
+          "id": "co1",
+          "label": "CO1",
+          "description": "Understand Database Management System, explain fundamental elements of a database management system."
+        },
+        {
+          "id": "co2",
+          "label": "CO2",
+          "description": "Compare the basic concepts of relational data model, entity-relationship model, file organization and use appropriate index structure."
+        },
+        {
+          "id": "co3",
+          "label": "CO3",
+          "description": "Apply efficient query optimization techniques, suitable transaction management, concurrency control mechanism and recovery management techniques."
+        },
+        {
+          "id": "co4",
+          "label": "CO4",
+          "description": "Analyze the database design techniques and improve the design by normalization."
+        },
+        {
+          "id": "co5",
+          "label": "CO5",
+          "description": "Design entity-relationship diagrams to represent simple database application scenarios, translate entity-relationship diagrams into relational tables, populate a relational database and formulate SQL queries on the data."
+        }
+      ],
+      "totalModules": 6,
+      "totalTopics": 47,
+      "modules": [
+        {
+          "id": "module-1",
+          "number": 1,
+          "roman": "I",
+          "hours": 2,
+          "title": "Introduction",
+          "topics": [
+            { "id": "dbms-m1-t1", "title": "Concept & Overview of DBMS" },
+            { "id": "dbms-m1-t2", "title": "Data Models" },
+            { "id": "dbms-m1-t3", "title": "Database Languages" },
+            { "id": "dbms-m1-t4", "title": "Database Administrator" },
+            { "id": "dbms-m1-t5", "title": "Database Users" },
+            { "id": "dbms-m1-t6", "title": "Three Schema Architecture of DBMS" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-2",
+          "number": 2,
+          "roman": "II",
+          "hours": 9,
+          "title": "Entity-Relationship and Relational Database Model",
+          "topics": [
+            { "id": "dbms-m2-t1", "title": "Basic Concepts" },
+            { "id": "dbms-m2-t2", "title": "Design Issues" },
+            { "id": "dbms-m2-t3", "title": "Mapping Constraints" },
+            { "id": "dbms-m2-t4", "title": "Keys" },
+            { "id": "dbms-m2-t5", "title": "Entity-Relationship Diagram" },
+            { "id": "dbms-m2-t6", "title": "Weak Entity Sets" },
+            { "id": "dbms-m2-t7", "title": "Extended E-R Features" },
+            { "id": "dbms-m2-t8", "title": "Case Study on E-R Model" },
+            {
+              "id": "dbms-m2-t9",
+              "title": "Structure of Relational Databases"
+            },
+            { "id": "dbms-m2-t10", "title": "Relational Algebra" },
+            { "id": "dbms-m2-t11", "title": "Relational Calculus" },
+            {
+              "id": "dbms-m2-t12",
+              "title": "Extended Relational Algebra Operations"
+            },
+            { "id": "dbms-m2-t13", "title": "Views" },
+            { "id": "dbms-m2-t14", "title": "Modifications of the Database" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-3",
+          "number": 3,
+          "roman": "III",
+          "hours": 6,
+          "title": "SQL and Integrity Constraints",
+          "topics": [
+            { "id": "dbms-m3-t1", "title": "Concept of DDL, DML, DCL" },
+            { "id": "dbms-m3-t2", "title": "Basic Structure" },
+            { "id": "dbms-m3-t3", "title": "Set Operations" },
+            { "id": "dbms-m3-t4", "title": "Aggregate Functions" },
+            { "id": "dbms-m3-t5", "title": "Null Values" },
+            { "id": "dbms-m3-t6", "title": "Domain Constraints" },
+            {
+              "id": "dbms-m3-t7",
+              "title": "Referential Integrity Constraints"
+            },
+            { "id": "dbms-m3-t8", "title": "Assertions" },
+            { "id": "dbms-m3-t9", "title": "Views" },
+            { "id": "dbms-m3-t10", "title": "Nested Subqueries" },
+            {
+              "id": "dbms-m3-t11",
+              "title": "Database Security Application Development using SQL"
+            },
+            { "id": "dbms-m3-t12", "title": "Stored Procedures and Triggers" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-4",
+          "number": 4,
+          "roman": "IV",
+          "hours": 8,
+          "title": "Relational Database Design",
+          "topics": [
+            { "id": "dbms-m4-t1", "title": "Functional Dependency" },
+            {
+              "id": "dbms-m4-t2",
+              "title": "Different Anomalies in Designing a Database"
+            },
+            {
+              "id": "dbms-m4-t3",
+              "title": "Normalization Using Functional Dependencies"
+            },
+            { "id": "dbms-m4-t4", "title": "Decomposition" },
+            { "id": "dbms-m4-t5", "title": "Boyce-Codd Normal Form (BCNF)" },
+            { "id": "dbms-m4-t6", "title": "3NF" },
+            {
+              "id": "dbms-m4-t7",
+              "title": "Normalization Using Multi-Valued Dependencies"
+            },
+            { "id": "dbms-m4-t8", "title": "4NF" },
+            { "id": "dbms-m4-t9", "title": "5NF" },
+            { "id": "dbms-m4-t10", "title": "Case Study" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-5",
+          "number": 5,
+          "roman": "V",
+          "hours": 7,
+          "title": "Internals of RDBMS",
+          "topics": [
+            { "id": "dbms-m5-t1", "title": "Physical Data Structures" },
+            {
+              "id": "dbms-m5-t2",
+              "title": "Query Optimization: Join Algorithm"
+            },
+            {
+              "id": "dbms-m5-t3",
+              "title": "Statistics and Cost Based Optimization"
+            },
+            { "id": "dbms-m5-t4", "title": "Transaction Processing" },
+            { "id": "dbms-m5-t5", "title": "Transaction Model Properties" },
+            { "id": "dbms-m5-t6", "title": "State Serializability" },
+            { "id": "dbms-m5-t7", "title": "Lock Base Protocols" },
+            { "id": "dbms-m5-t8", "title": "Two Phase Locking" },
+            { "id": "dbms-m5-t9", "title": "Dead Lock Handling" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-6",
+          "number": 6,
+          "roman": "VI",
+          "hours": 6,
+          "title": "File Organization & Index Structures",
+          "topics": [
+            { "id": "dbms-m6-t1", "title": "File & Record Concept" },
+            { "id": "dbms-m6-t2", "title": "Placing File Records on Disk" },
+            { "id": "dbms-m6-t3", "title": "Fixed and Variable Sized Records" },
+            {
+              "id": "dbms-m6-t4",
+              "title": "Types of Single-Level Index: Primary, Secondary, Clustering"
+            },
+            { "id": "dbms-m6-t5", "title": "Multilevel Indexes" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        }
+      ],
+      "books": [
+        "Henry F. Korth and Silberschatz Abraham, \"Database System Concepts\", Mc.Graw Hill.",
+        "Elmasri Ramez and Novathe Shamkant, \"Fundamentals of Database Systems\", Benjamin Cummings Publishing Company."
+      ],
+      "references": [
+        "Fundamentals of Database Systems, Ramez Elmasri, Shamkant B.Navathe, Addison Wesley Publishing.",
+        "Ramakrishnan: Database Management System, McGraw-Hill."
+      ]
+    },
+    {
+      "id": "computer-networking",
+      "code": "IT502",
+      "name": "Computer Networking",
+      "type": "theory",
+      "category": "Major",
+      "credits": 3,
+      "studyHours": 36,
+      "weeklyHours": { "L": 3, "T": 0, "P": 0, "total": 3 },
+      "icon": "server-outline",
+      "color": "#F76F4F",
+      "prerequisites": [
+        "Basic Digital Communication",
+        "Computer Architecture and Operating System"
+      ],
+      "objectives": "Understanding the basic concept of different network models, explaining the network architecture, analyzing and evaluating different network protocols.",
+      "outcomes": [
+        {
+          "id": "co1",
+          "label": "CO1",
+          "description": "Illustrate the network topologies, model and architecture."
+        },
+        {
+          "id": "co2",
+          "label": "CO2",
+          "description": "Apply different networking device, protocol for problem solving."
+        },
+        {
+          "id": "co3",
+          "label": "CO3",
+          "description": "Analyse different networking functions in different layer of OSI and TCP/IP Model."
+        },
+        {
+          "id": "co4",
+          "label": "CO4",
+          "description": "Evaluate the optimal route for communication and idea about routing algorithms for data transmission."
+        },
+        {
+          "id": "co5",
+          "label": "CO5",
+          "description": "Design network architecture and implement in practical field of work."
+        }
+      ],
+      "totalModules": 6,
+      "totalTopics": 40,
+      "modules": [
+        {
+          "id": "module-1",
+          "number": 1,
+          "roman": "I",
+          "hours": 4,
+          "title": "Overview of Data Communication and Networking",
+          "topics": [
+            {
+              "id": "cn-m1-t1",
+              "title": "Introduction to Data Communication and Networking"
+            },
+            { "id": "cn-m1-t2", "title": "Data Communications Components" },
+            {
+              "id": "cn-m1-t3",
+              "title": "Data Representation (ASCII, ISO etc.)"
+            },
+            {
+              "id": "cn-m1-t4",
+              "title": "Direction of Data Flow: Simplex, Half Duplex, Full Duplex"
+            },
+            { "id": "cn-m1-t5", "title": "Network Criteria" },
+            {
+              "id": "cn-m1-t6",
+              "title": "Physical Structure: Type of Connection, Topology"
+            },
+            {
+              "id": "cn-m1-t7",
+              "title": "Categories of Network: LAN, MAN, WAN"
+            },
+            {
+              "id": "cn-m1-t8",
+              "title": "Internet: Brief History, Protocols and Standards"
+            },
+            { "id": "cn-m1-t9", "title": "Reference Models: OSI and TCP/IP" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-2",
+          "number": 2,
+          "roman": "II",
+          "hours": 5,
+          "title": "Physical Layer",
+          "topics": [
+            {
+              "id": "cn-m2-t1",
+              "title": "Overview of Data, Signal, Transmission & Transmission Media"
+            },
+            {
+              "id": "cn-m2-t2",
+              "title": "Circuit Switching: Time Division & Space Division Switch, TDM Bus"
+            },
+            { "id": "cn-m2-t3", "title": "Telephone Network" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-3",
+          "number": 3,
+          "roman": "III",
+          "hours": 8,
+          "title": "Data Link Layer",
+          "topics": [
+            { "id": "cn-m3-t1", "title": "Types of Errors" },
+            { "id": "cn-m3-t2", "title": "Framing" },
+            {
+              "id": "cn-m3-t3",
+              "title": "Error Detection & Correction Methods"
+            },
+            { "id": "cn-m3-t4", "title": "Flow Control" },
+            { "id": "cn-m3-t5", "title": "Protocols: Stop & Wait ARQ" },
+            { "id": "cn-m3-t6", "title": "Go Back-N ARQ" },
+            { "id": "cn-m3-t7", "title": "Selective Repeat ARQ" },
+            { "id": "cn-m3-t8", "title": "HDLC" },
+            { "id": "cn-m3-t9", "title": "Point to Point Protocol" },
+            { "id": "cn-m3-t10", "title": "LCP, NCP, Token Ring" },
+            { "id": "cn-m3-t11", "title": "Reservation, Polling" },
+            {
+              "id": "cn-m3-t12",
+              "title": "Multiple Access Protocols: Pure ALOHA, Slotted ALOHA"
+            },
+            { "id": "cn-m3-t13", "title": "CSMA, CSMA/CD, CSMA/CA" },
+            {
+              "id": "cn-m3-t14",
+              "title": "Traditional Ethernet, Fast Ethernet"
+            }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-4",
+          "number": 4,
+          "roman": "IV",
+          "hours": 7,
+          "title": "Network Layer",
+          "topics": [
+            {
+              "id": "cn-m4-t1",
+              "title": "Internetworking & Devices: Repeaters, Hubs, Bridges, Switches, Router, Gateway"
+            },
+            {
+              "id": "cn-m4-t2",
+              "title": "Addressing: IP Addressing, Subnetting"
+            },
+            {
+              "id": "cn-m4-t3",
+              "title": "Routing: Techniques, Routing Protocols"
+            },
+            { "id": "cn-m4-t4", "title": "ARP, IP, ICMP, IPV6" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-5",
+          "number": 5,
+          "roman": "V",
+          "hours": 6,
+          "title": "Transport Layer",
+          "topics": [
+            { "id": "cn-m5-t1", "title": "Process to Process Delivery" },
+            { "id": "cn-m5-t2", "title": "UDP" },
+            { "id": "cn-m5-t3", "title": "TCP" },
+            {
+              "id": "cn-m5-t4",
+              "title": "Congestion Control: Open Loop, Closed Loop Choke Packets"
+            },
+            {
+              "id": "cn-m5-t5",
+              "title": "Quality of Service: Techniques to Improve QoS"
+            },
+            { "id": "cn-m5-t6", "title": "Leaky Bucket Algorithm" },
+            { "id": "cn-m5-t7", "title": "Token Bucket Algorithm" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-6",
+          "number": 6,
+          "roman": "VI",
+          "hours": 6,
+          "title": "Application Layer",
+          "topics": [
+            { "id": "cn-m6-t1", "title": "DNS" },
+            { "id": "cn-m6-t2", "title": "SMTP" },
+            { "id": "cn-m6-t3", "title": "SNMP" },
+            { "id": "cn-m6-t4", "title": "FTP" },
+            { "id": "cn-m6-t5", "title": "HTTPS" },
+            { "id": "cn-m6-t6", "title": "Firewalls" },
+            { "id": "cn-m6-t7", "title": "IP Filtering" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        }
+      ],
+      "books": [
+        "B. A. Forouzan – \"Data Communications and Networking (5th Ed.)\" – TMH.",
+        "W. Stallings – \"Data and Computer Communications (5th Ed.)\" – PHI/Pearson Education."
+      ],
+      "references": [
+        "S. Tanenbaum – \"Computer Networks (4th Ed.)\" – Pearson Education/PHI.",
+        "Black, Data & Computer Communication, PHI.",
+        "Zheng & Akhtar, Network for Computer Scientists & Engineers, OUP."
+      ]
+    },
+    {
+      "id": "daa",
+      "code": "IT503",
+      "name": "Design and Analysis of Algorithm",
+      "type": "theory",
+      "category": "Major",
+      "credits": 3,
+      "studyHours": 36,
+      "weeklyHours": { "L": 3, "T": 0, "P": 0, "total": 3 },
+      "icon": "code-braces",
+      "color": "#A14FF7",
+      "prerequisites": [
+        "Discrete Mathematics",
+        "Data Structure",
+        "Basic Programming Knowledge"
+      ],
+      "objectives": "To study paradigms and approaches used to analyze and design algorithms and to appreciate the impact of algorithm design in practice, use different computational models, order notation and various complexity measures to analyze the complexity/performance of different algorithms.",
+      "outcomes": [
+        {
+          "id": "co1",
+          "label": "CO1",
+          "description": "Understanding the time complexity of the basic algorithms for the classic problems in various domains."
+        },
+        {
+          "id": "co2",
+          "label": "CO2",
+          "description": "Apply the classic algorithms to solve different problems."
+        },
+        {
+          "id": "co3",
+          "label": "CO3",
+          "description": "Evaluate existing algorithms by calculating the time complexity."
+        },
+        {
+          "id": "co4",
+          "label": "CO4",
+          "description": "Design algorithm to solve various problems in different domains."
+        },
+        {
+          "id": "co5",
+          "label": "CO5",
+          "description": "Design efficient algorithms for common engineering problems."
+        }
+      ],
+      "totalModules": 7,
+      "totalTopics": 38,
+      "modules": [
+        {
+          "id": "module-1",
+          "number": 1,
+          "roman": "I",
+          "hours": 2,
+          "title": "Introduction",
+          "topics": [
+            { "id": "daa-m1-t1", "title": "Time and Space Complexity" },
+            {
+              "id": "daa-m1-t2",
+              "title": "Different Asymptotic Notations and Their Mathematical Significance"
+            }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-2",
+          "number": 2,
+          "roman": "II",
+          "hours": 8,
+          "title": "Divide and Conquer & Dynamic Programming",
+          "topics": [
+            { "id": "daa-m2-t1", "title": "Divide and Conquer: Basic Method" },
+            { "id": "daa-m2-t2", "title": "Merge Sort and Its Complexity" },
+            { "id": "daa-m2-t3", "title": "Quick Sort and Its Complexity" },
+            { "id": "daa-m2-t4", "title": "Heap Sort and Its Complexity" },
+            { "id": "daa-m2-t5", "title": "Dynamic Programming: Basic Method" },
+            { "id": "daa-m2-t6", "title": "Matrix Chain Multiplication" },
+            { "id": "daa-m2-t7", "title": "All Pair Shortest Paths" },
+            { "id": "daa-m2-t8", "title": "Single Source Shortest Path" },
+            {
+              "id": "daa-m2-t9",
+              "title": "Strassen's Matrix Multiplication Algorithm"
+            }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-3",
+          "number": 3,
+          "roman": "III",
+          "hours": 8,
+          "title": "Backtracking & Greedy Method",
+          "topics": [
+            { "id": "daa-m3-t1", "title": "Backtracking: Basic Method" },
+            { "id": "daa-m3-t2", "title": "8 Queens Problem" },
+            { "id": "daa-m3-t3", "title": "Graph Coloring Problem" },
+            { "id": "daa-m3-t4", "title": "Greedy Method: Basic Method" },
+            { "id": "daa-m3-t5", "title": "Knapsack Problem" },
+            { "id": "daa-m3-t6", "title": "Traveling Salesman Problem" },
+            { "id": "daa-m3-t7", "title": "Job Sequencing with Deadlines" },
+            {
+              "id": "daa-m3-t8",
+              "title": "Minimum Cost Spanning Tree by Prim's Algorithm"
+            },
+            {
+              "id": "daa-m3-t9",
+              "title": "Minimum Cost Spanning Tree by Kruskal's Algorithm"
+            }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-4",
+          "number": 4,
+          "roman": "IV",
+          "hours": 3,
+          "title": "Branch and Bound",
+          "topics": [
+            {
+              "id": "daa-m4-t1",
+              "title": "Branch and Bound Technique: Integer Programming"
+            },
+            { "id": "daa-m4-t2", "title": "0/1 Knapsack Problem" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-5",
+          "number": 5,
+          "roman": "V",
+          "hours": 4,
+          "title": "Disjoint Set Manipulation & String Matching",
+          "topics": [
+            {
+              "id": "daa-m5-t1",
+              "title": "Disjoint Set Manipulation: Set Manipulation Algorithm UNION-FIND"
+            },
+            { "id": "daa-m5-t2", "title": "Union by Rank" },
+            { "id": "daa-m5-t3", "title": "String Matching: Naive Algorithm" },
+            {
+              "id": "daa-m5-t4",
+              "title": "Knuth, Morris, Pratt (KMP) Algorithm with Their Complexities"
+            }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-6",
+          "number": 6,
+          "roman": "VI",
+          "hours": 6,
+          "title": "Amortized Analysis & Network Flow",
+          "topics": [
+            {
+              "id": "daa-m6-t1",
+              "title": "Amortized Analysis: Aggregate Method"
+            },
+            { "id": "daa-m6-t2", "title": "Accounting Method" },
+            { "id": "daa-m6-t3", "title": "Potential Method" },
+            {
+              "id": "daa-m6-t4",
+              "title": "Network Flow: Ford Fulkerson Algorithm"
+            },
+            {
+              "id": "daa-m6-t5",
+              "title": "Max-Flow Min-Cut Theorem (Statement and Illustration)"
+            }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-7",
+          "number": 7,
+          "roman": "VII",
+          "hours": 5,
+          "title": "NP-Completeness & Approximation Algorithms",
+          "topics": [
+            {
+              "id": "daa-m7-t1",
+              "title": "Notion of NP-Completeness: P Class"
+            },
+            { "id": "daa-m7-t2", "title": "NP Class" },
+            { "id": "daa-m7-t3", "title": "NP Hard Class" },
+            {
+              "id": "daa-m7-t4",
+              "title": "NP Complete Class and Their Interrelationship"
+            },
+            { "id": "daa-m7-t5", "title": "Satisfiability Problem" },
+            { "id": "daa-m7-t6", "title": "Cook's Theorem (Statement Only)" },
+            {
+              "id": "daa-m7-t7",
+              "title": "Approximation Algorithms: Necessity of Approximation Scheme"
+            },
+            { "id": "daa-m7-t8", "title": "Performance Guarantee" },
+            {
+              "id": "daa-m7-t9",
+              "title": "Polynomial Time Approximation Schemes"
+            }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        }
+      ],
+      "books": [
+        "A. Aho, J. Hopcroft and J. Ullman, \"The Design and Analysis of Algorithms\".",
+        "D. E. Knuth, \"The Art of Computer Programming\", Vol. 3.",
+        "E. Horowitz and Shani, \"Fundamentals of Computer Algorithms\".",
+        "T. H. Cormen, C. E. Leiserson, R. L. Rivest and C. Stein, \"Introduction to Algorithms\"."
+      ],
+      "references": [
+        "T. H. Cormen, C. E. Leiserson, R. L. Rivest and C. Stein, \"Introduction to Algorithms\"."
+      ]
+    },
+    {
+      "id": "ai",
+      "code": "IT504",
+      "name": "Artificial Intelligence",
+      "type": "theory",
+      "category": "Major",
+      "credits": 3,
+      "studyHours": 36,
+      "weeklyHours": { "L": 3, "T": 0, "P": 0, "total": 3 },
+      "icon": "robot-outline",
+      "color": "#F7C94F",
+      "prerequisites": [
+        "Data Structure",
+        "Design and Analysis of Algorithms",
+        "Statistics"
+      ],
+      "objectives": "Comprehend the fundamental concepts of Knowledge Representation and Inference in Artificial Intelligence and its utilitarian importance in current technological context.",
+      "outcomes": [
+        {
+          "id": "co1",
+          "label": "CO1",
+          "description": "Understand and explain the fundamental concepts of Knowledge Representation."
+        },
+        {
+          "id": "co2",
+          "label": "CO2",
+          "description": "Apply difficult real life problems in a state space representation so as to solve them using AI techniques like searching and game playing."
+        },
+        {
+          "id": "co3",
+          "label": "CO3",
+          "description": "Explore relevant literature and apply the concept of Heuristic Techniques of Artificial Intelligence to solve problems."
+        },
+        {
+          "id": "co4",
+          "label": "CO4",
+          "description": "Develop Inference Models for proposing solutions to the problems of Artificial Intelligence."
+        },
+        {
+          "id": "co5",
+          "label": "CO5",
+          "description": "Demonstrate and enrich knowledge to select and apply AI tools to synthesize information and develop models within constraints of application area."
+        }
+      ],
+      "totalModules": 8,
+      "totalTopics": 55,
+      "modules": [
+        {
+          "id": "module-1",
+          "number": 1,
+          "roman": "I",
+          "hours": 3,
+          "title": "Introduction to Artificial Intelligence",
+          "topics": [
+            { "id": "ai-m1-t1", "title": "Basic Concepts" },
+            { "id": "ai-m1-t2", "title": "History of Artificial Intelligence" },
+            {
+              "id": "ai-m1-t3",
+              "title": "Architecture of an Artificial Intelligent Agent"
+            },
+            { "id": "ai-m1-t4", "title": "Structure of Agents" },
+            { "id": "ai-m1-t5", "title": "Goal Based Agents" },
+            { "id": "ai-m1-t6", "title": "Utility Based Agents" },
+            { "id": "ai-m1-t7", "title": "Learning Agents" },
+            {
+              "id": "ai-m1-t8",
+              "title": "Applications of Artificial Intelligence"
+            }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-2",
+          "number": 2,
+          "roman": "II",
+          "hours": 5,
+          "title": "AI Problem Formulation as State-Space Exploration for Goal Searching",
+          "topics": [
+            { "id": "ai-m2-t1", "title": "Basic Concepts" },
+            {
+              "id": "ai-m2-t2",
+              "title": "State-Space Exploration Formulation for Water Jug Problem"
+            },
+            {
+              "id": "ai-m2-t3",
+              "title": "Missionaries and Cannibals Problems"
+            },
+            { "id": "ai-m2-t4", "title": "8-Puzzle Problem" },
+            { "id": "ai-m2-t5", "title": "Constraint Satisfaction Problem" },
+            {
+              "id": "ai-m2-t6",
+              "title": "Production System for Goal Searching"
+            },
+            {
+              "id": "ai-m2-t7",
+              "title": "Blind Search: Breadth First Search (BFS)"
+            },
+            { "id": "ai-m2-t8", "title": "Depth First Search (DFS)" },
+            { "id": "ai-m2-t9", "title": "Depth Limited Search" },
+            { "id": "ai-m2-t10", "title": "Iterative Deepening Search" },
+            { "id": "ai-m2-t11", "title": "Uniform Cost Search" },
+            { "id": "ai-m2-t12", "title": "Bidirectional Search" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-3",
+          "number": 3,
+          "roman": "III",
+          "hours": 7,
+          "title": "Heuristic Techniques for Goal Searching",
+          "topics": [
+            {
+              "id": "ai-m3-t1",
+              "title": "Basic Concepts of Heuristic Techniques"
+            },
+            { "id": "ai-m3-t2", "title": "Properties of Heuristic Functions" },
+            { "id": "ai-m3-t3", "title": "Hill Climbing Search" },
+            { "id": "ai-m3-t4", "title": "Best First Search" },
+            { "id": "ai-m3-t5", "title": "A* Search" },
+            {
+              "id": "ai-m3-t6",
+              "title": "Memory-Bounded Heuristic Search: Iterative-Deepening A* Search"
+            },
+            { "id": "ai-m3-t7", "title": "Recursive Best First Search" },
+            {
+              "id": "ai-m3-t8",
+              "title": "Simplified Memory Bounded A* Search"
+            },
+            {
+              "id": "ai-m3-t9",
+              "title": "Simulated Annealing Based Stochastic Search"
+            },
+            {
+              "id": "ai-m3-t10",
+              "title": "Genetic Algorithm Based Evolutionary Search"
+            },
+            { "id": "ai-m3-t11", "title": "Ant Colony Optimization" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-4",
+          "number": 4,
+          "roman": "IV",
+          "hours": 2,
+          "title": "Adversarial Search for Game Playing",
+          "topics": [
+            { "id": "ai-m4-t1", "title": "Basic Concepts" },
+            { "id": "ai-m4-t2", "title": "Minimax Search" },
+            { "id": "ai-m4-t3", "title": "Alpha-Beta Pruning" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-5",
+          "number": 5,
+          "roman": "V",
+          "hours": 5,
+          "title": "Knowledge Representation and Inference using Propositional Logic and Predicate Logic",
+          "topics": [
+            {
+              "id": "ai-m5-t1",
+              "title": "Propositional Logic: Knowledge Representation and Inference"
+            },
+            {
+              "id": "ai-m5-t2",
+              "title": "Predicate Logic: Knowledge Representation"
+            },
+            {
+              "id": "ai-m5-t3",
+              "title": "Inference and Answer Extraction using First Order Predicate Logic"
+            }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-6",
+          "number": 6,
+          "roman": "VI",
+          "hours": 4,
+          "title": "Knowledge Representation",
+          "topics": [
+            { "id": "ai-m6-t1", "title": "Semantic Nets and Frames" },
+            {
+              "id": "ai-m6-t2",
+              "title": "Strong Slot-and-Filler Structure for Knowledge Representation"
+            },
+            { "id": "ai-m6-t3", "title": "Conceptual Dependency and Script" },
+            {
+              "id": "ai-m6-t4",
+              "title": "Expert System: Introduction to Expert System"
+            },
+            { "id": "ai-m6-t5", "title": "Phases of Expert System" },
+            {
+              "id": "ai-m6-t6",
+              "title": "Characteristics of Expert System and a Case Study"
+            },
+            {
+              "id": "ai-m6-t7",
+              "title": "Introduction of Executive Support System and Decision Support System"
+            }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-7",
+          "number": 7,
+          "roman": "VII",
+          "hours": 8,
+          "title": "Reasoning under Uncertainty & NLP",
+          "topics": [
+            {
+              "id": "ai-m7-t1",
+              "title": "Bayesian Inferencing and Bayesian Belief Network"
+            },
+            { "id": "ai-m7-t2", "title": "Dempster-Shafer Theory" },
+            {
+              "id": "ai-m7-t3",
+              "title": "Overview of Fuzzy Logic and Inferencing"
+            },
+            { "id": "ai-m7-t4", "title": "Overview of Hidden Markov Model" },
+            {
+              "id": "ai-m7-t5",
+              "title": "Introduction to Natural Language Processing: Basic Concepts"
+            },
+            {
+              "id": "ai-m7-t6",
+              "title": "Steps of Natural Language Processing"
+            },
+            { "id": "ai-m7-t7", "title": "Morphological Analysis" },
+            { "id": "ai-m7-t8", "title": "Syntactic and Semantic Analysis" },
+            {
+              "id": "ai-m7-t9",
+              "title": "Discourse Integration and Pragmatic Analysis"
+            },
+            {
+              "id": "ai-m7-t10",
+              "title": "Applications of Natural Language Processing"
+            }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-8",
+          "number": 8,
+          "roman": "VIII",
+          "hours": 2,
+          "title": "Introduction to Machine Learning",
+          "topics": [
+            {
+              "id": "ai-m8-t1",
+              "title": "Basic Concepts of Machine Learning Model"
+            },
+            { "id": "ai-m8-t2", "title": "Supervised Learning" },
+            { "id": "ai-m8-t3", "title": "Unsupervised Learning" },
+            { "id": "ai-m8-t4", "title": "Reinforced Learning" },
+            {
+              "id": "ai-m8-t5",
+              "title": "Overview of Artificial Neural Network"
+            }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        }
+      ],
+      "books": [
+        "Russell, S. and Norvig, P. 2015. Artificial Intelligence - A Modern Approach, 3rd edition, Prentice Hall.",
+        "Rich, E., Knight, K and Shankar, B. 2009. Artificial Intelligence, 3rd edition, Tata McGrawHill."
+      ],
+      "references": [
+        "Padhy, N.P. 2009. Artificial Intelligence and Intelligent Systems, Oxford University Press.",
+        "Deepak Khemani, \"A First Course in Artificial Intelligence\", McGraw Hill."
+      ]
+    },
+    {
+      "id": "ecommerce-erp",
+      "code": "IT505A",
+      "name": "e-Commerce and ERP",
+      "type": "theory",
+      "category": "Minor",
+      "credits": 2,
+      "studyHours": 35,
+      "weeklyHours": { "L": 2, "T": 0, "P": 0, "total": 2 },
+      "icon": "store-outline",
+      "color": "#4FC9F7",
+      "prerequisites": [
+        "Concepts of Computer Networking",
+        "Operating System",
+        "Database Management System"
+      ],
+      "objectives": "The objective of the course is to explain the characteristics and functions of electronic commerce including mobile commerce, fundamental characteristics of electronic markets, common business models used in B2C and B2B electronic commerce. To acquire an overview to ERP and the knowledge on related technologies. Skill to ERP Manufacturing Perspective and ERP modules and to examine ERP tools and understand the benefits of ERP.",
+      "outcomes": [
+        {
+          "id": "co1",
+          "label": "CO1",
+          "description": "Understand the policy issues related to privacy, intellectual property rights, and establishing identity those are germane to electronic commerce along with the Internet and related technologies."
+        },
+        {
+          "id": "co2",
+          "label": "CO2",
+          "description": "Comprehend the underlying economic mechanisms and driving forces of E-Commerce."
+        },
+        {
+          "id": "co3",
+          "label": "CO3",
+          "description": "Analyse the impact that electronic commerce is facing and outlines the different digital transaction process and basic concepts of e-commerce."
+        },
+        {
+          "id": "co4",
+          "label": "CO4",
+          "description": "Identify different technologies and IT support used in ERP."
+        },
+        {
+          "id": "co5",
+          "label": "CO5",
+          "description": "Apply different tools used in ERP."
+        }
+      ],
+      "totalModules": 6,
+      "totalTopics": 38,
+      "modules": [
+        {
+          "id": "module-1",
+          "number": 1,
+          "roman": "I",
+          "hours": 5,
+          "title": "Introduction to E-Commerce",
+          "topics": [
+            { "id": "ec-m1-t1", "title": "Definition and Scope of E-Commerce" },
+            { "id": "ec-m1-t2", "title": "Hardware Requirements" },
+            { "id": "ec-m1-t3", "title": "E-Commerce and Trade Cycle" },
+            { "id": "ec-m1-t4", "title": "Electronic Mark Data Interchange" },
+            { "id": "ec-m1-t5", "title": "Internet Commerce" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-2",
+          "number": 2,
+          "roman": "II",
+          "hours": 6,
+          "title": "Business to Business E-Commerce",
+          "topics": [
+            { "id": "ec-m2-t1", "title": "Electronic Markets" },
+            {
+              "id": "ec-m2-t2",
+              "title": "Electronic Data Interchange (EDI): Technology"
+            },
+            { "id": "ec-m2-t3", "title": "EDI Standards (UN/EDIFACT)" },
+            {
+              "id": "ec-m2-t4",
+              "title": "EDI Communications, Implementations, Agreements, Security"
+            },
+            { "id": "ec-m2-t5", "title": "EDI and Business" },
+            { "id": "ec-m2-t6", "title": "Inter-Organizational E-commerce" },
+            { "id": "ec-m2-t7", "title": "Business Models for E-commerce" },
+            { "id": "ec-m2-t8", "title": "Business Process Re-Engineering" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-3",
+          "number": 3,
+          "roman": "III",
+          "hours": 5,
+          "title": "Legal Issues",
+          "topics": [
+            {
+              "id": "ec-m3-t1",
+              "title": "Risks: Paper Document vs. Electronic Document"
+            },
+            {
+              "id": "ec-m3-t2",
+              "title": "Authentication of Electronic Document"
+            },
+            {
+              "id": "ec-m3-t3",
+              "title": "Laws and Legal Issues for Internet Commerce"
+            },
+            { "id": "ec-m3-t4", "title": "Trademarks and Domain Names" },
+            { "id": "ec-m3-t5", "title": "Copyright" },
+            { "id": "ec-m3-t6", "title": "Jurisdiction Issues" },
+            { "id": "ec-m3-t7", "title": "Service Provider Liability" },
+            { "id": "ec-m3-t8", "title": "Enforceable Online Contract" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-4",
+          "number": 4,
+          "roman": "IV",
+          "hours": 7,
+          "title": "Security Issues",
+          "topics": [
+            {
+              "id": "ec-m4-t1",
+              "title": "Symmetric and Asymmetric Cryptosystems"
+            },
+            { "id": "ec-m4-t2", "title": "RSA and DES" },
+            { "id": "ec-m4-t3", "title": "Digital Signature" },
+            { "id": "ec-m4-t4", "title": "Protocols for Secure Messaging" },
+            {
+              "id": "ec-m4-t5",
+              "title": "Secure Electronic Transaction (SET) Protocol"
+            },
+            { "id": "ec-m4-t6", "title": "Electronic Cash Over Internet" },
+            { "id": "ec-m4-t7", "title": "Internet Security" },
+            {
+              "id": "ec-m4-t8",
+              "title": "Search Engines and Intelligent Agents in E-Commerce"
+            },
+            { "id": "ec-m4-t9", "title": "Electronic Payment Systems" },
+            { "id": "ec-m4-t10", "title": "E-Security" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-5",
+          "number": 5,
+          "roman": "V",
+          "hours": 7,
+          "title": "Business to Consumer E-Commerce and E-Business",
+          "topics": [
+            { "id": "ec-m5-t1", "title": "Consumer Trade Transaction" },
+            { "id": "ec-m5-t2", "title": "Web Metrics" },
+            { "id": "ec-m5-t3", "title": "Elements of E-Commerce" },
+            { "id": "ec-m5-t4", "title": "Industry Impacts of E-Business" },
+            {
+              "id": "ec-m5-t5",
+              "title": "Integrating Intranet and Internet Web Applications Across Multiple Networks"
+            },
+            {
+              "id": "ec-m5-t6",
+              "title": "Internet Bookshops, Software Supplies and Support, Electronic Newspapers"
+            },
+            {
+              "id": "ec-m5-t7",
+              "title": "Internet Banking, Virtual Auctions, Online Share Dealing"
+            },
+            { "id": "ec-m5-t8", "title": "Gambling on the Net, E-Diversity" },
+            { "id": "ec-m5-t9", "title": "Case Studies through Internet" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-6",
+          "number": 6,
+          "roman": "VI",
+          "hours": 5,
+          "title": "Mobile Commerce",
+          "topics": [
+            { "id": "ec-m6-t1", "title": "Overview and Infrastructure" },
+            { "id": "ec-m6-t2", "title": "Applications of M-Commerce" },
+            { "id": "ec-m6-t3", "title": "Mobile Payment" },
+            { "id": "ec-m6-t4", "title": "Limitations" },
+            { "id": "ec-m6-t5", "title": "Security in M-Commerce" },
+            { "id": "ec-m6-t6", "title": "ERP and Data Warehousing" },
+            { "id": "ec-m6-t7", "title": "ERP and E-Business" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        }
+      ],
+      "books": [
+        "E-Commerce-Strategy, Technologies & Applications by David Whitley, TMH.",
+        "Handbook on Electronic Commerce, Shaw et al., Springer publication.",
+        "Enterprise Resource Planning – Alexis Leon, Tata McGraw Hill."
+      ],
+      "references": [
+        "E-Commerce-Strategy, Technologies & Applications by David Whitley, TMH.",
+        "Applied E-Commerce, Langer, John Wiley Publication.",
+        "E-Commerce - The cutting edge of business by Kamlesh K. Bajaj, TMH.",
+        "Enterprise Resource Planning, 2nd Edition by Alexis Leon, Tata McGraw Hill Education, 2008.",
+        "Guide to Planning ERP Application, Annetta Clewwto and Dane Franklin, McGraw Hill, 1997."
+      ]
+    },
+    {
+      "id": "mobile-app-dev",
+      "code": "IT505B",
+      "name": "Mobile Application Development",
+      "type": "theory",
+      "category": "Minor",
+      "credits": 2,
+      "studyHours": 36,
+      "weeklyHours": { "L": 2, "T": 0, "P": 0, "total": 2 },
+      "icon": "cellphone",
+      "color": "#4FF7A1",
+      "prerequisites": ["Knowledge in basic programming languages"],
+      "objectives": "This course introduces students to programming technologies, design and development related to mobile applications. Topics include accessing device capabilities, industry standards, operating systems, and programming for mobile applications using an OS Software Development Kit (SDK). Upon completion, students should be able to create basic applications for mobile devices.",
+      "outcomes": [
+        {
+          "id": "co1",
+          "label": "CO1",
+          "description": "Identify various concepts of mobile programming that make it unique from programming for other platforms."
+        },
+        {
+          "id": "co2",
+          "label": "CO2",
+          "description": "Critique mobile applications on their design pros and cons."
+        },
+        {
+          "id": "co3",
+          "label": "CO3",
+          "description": "Utilize rapid prototyping techniques to design and develop sophisticated mobile interfaces."
+        },
+        {
+          "id": "co4",
+          "label": "CO4",
+          "description": "Program mobile applications for the Android operating system that use basic and advanced phone features."
+        },
+        {
+          "id": "co5",
+          "label": "CO5",
+          "description": "Deploy applications to the Android marketplace for distribution."
+        }
+      ],
+      "totalModules": 5,
+      "totalTopics": 34,
+      "modules": [
+        {
+          "id": "module-1",
+          "number": 1,
+          "roman": "I",
+          "hours": 7,
+          "title": "Introduction to Android",
+          "topics": [
+            { "id": "mad-m1-t1", "title": "The Android Platform" },
+            { "id": "mad-m1-t2", "title": "Android SDK" },
+            { "id": "mad-m1-t3", "title": "Eclipse Installation" },
+            { "id": "mad-m1-t4", "title": "Android Installation" },
+            {
+              "id": "mad-m1-t5",
+              "title": "Building your First Android Application"
+            },
+            {
+              "id": "mad-m1-t6",
+              "title": "Understanding Anatomy of Android Application"
+            },
+            { "id": "mad-m1-t7", "title": "Android Manifest File" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-2",
+          "number": 2,
+          "roman": "II",
+          "hours": 8,
+          "title": "Android Application Design Essentials",
+          "topics": [
+            { "id": "mad-m2-t1", "title": "Anatomy of an Android Application" },
+            { "id": "mad-m2-t2", "title": "Android Terminologies" },
+            { "id": "mad-m2-t3", "title": "Application Context" },
+            { "id": "mad-m2-t4", "title": "Activities" },
+            { "id": "mad-m2-t5", "title": "Services" },
+            { "id": "mad-m2-t6", "title": "Intents" },
+            {
+              "id": "mad-m2-t7",
+              "title": "Receiving and Broadcasting Intents"
+            },
+            {
+              "id": "mad-m2-t8",
+              "title": "Android Manifest File and Its Common Settings"
+            },
+            { "id": "mad-m2-t9", "title": "Using Intent Filter" },
+            { "id": "mad-m2-t10", "title": "Permissions" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-3",
+          "number": 3,
+          "roman": "III",
+          "hours": 7,
+          "title": "Android User Interface Design Essentials",
+          "topics": [
+            { "id": "mad-m3-t1", "title": "User Interface Screen Elements" },
+            {
+              "id": "mad-m3-t2",
+              "title": "Designing User Interfaces with Layouts"
+            },
+            { "id": "mad-m3-t3", "title": "Drawing and Working with Animation" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-4",
+          "number": 4,
+          "roman": "IV",
+          "hours": 7,
+          "title": "Testing and Publishing Android Applications",
+          "topics": [
+            { "id": "mad-m4-t1", "title": "Testing Android Applications" },
+            { "id": "mad-m4-t2", "title": "Publishing Android Application" },
+            { "id": "mad-m4-t3", "title": "Using Android Preferences" },
+            {
+              "id": "mad-m4-t4",
+              "title": "Managing Application Resources in a Hierarchy"
+            },
+            {
+              "id": "mad-m4-t5",
+              "title": "Working with Different Types of Resources"
+            }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-5",
+          "number": 5,
+          "roman": "V",
+          "hours": 7,
+          "title": "Using Common Android APIs",
+          "topics": [
+            {
+              "id": "mad-m5-t1",
+              "title": "Using Android Data and Storage APIs"
+            },
+            { "id": "mad-m5-t2", "title": "Managing Data using SQLite" },
+            {
+              "id": "mad-m5-t3",
+              "title": "Sharing Data between Applications with Content Providers"
+            },
+            { "id": "mad-m5-t4", "title": "Using Android Networking APIs" },
+            { "id": "mad-m5-t5", "title": "Using Android Web APIs" },
+            { "id": "mad-m5-t6", "title": "Using Android Telephony APIs" },
+            {
+              "id": "mad-m5-t7",
+              "title": "Deploying Android Application to the World"
+            }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        }
+      ],
+      "books": [
+        "T1. Lauren Darcey and Shane Conder, \"Android Wireless Application Development\", Pearson Education, 2nd ed."
+      ],
+      "references": [
+        "R1. Reto Meier, \"Professional Android 2 Application Development\", Wiley India Pvt Ltd.",
+        "R2. Mark L Murphy, \"Beginning Android\", Wiley India Pvt Ltd.",
+        "R3. Android Application Development All in one for Dummies by Barry Burd, Edition: I."
+      ]
+    },
+    {
+      "id": "microprocessor",
+      "code": "IT505C",
+      "name": "Microprocessor and Microcontroller",
+      "type": "theory",
+      "category": "Minor",
+      "credits": 2,
+      "studyHours": 36,
+      "weeklyHours": { "L": 2, "T": 0, "P": 0, "total": 2 },
+      "icon": "chip",
+      "color": "#F74F8E",
+      "prerequisites": [
+        "Digital Electronics",
+        "Computer Programming",
+        "Computer Organization and Architecture"
+      ],
+      "objectives": "To develop an in-depth understanding of the operation of microprocessors and microcontrollers, machine language programming & interfacing techniques.",
+      "outcomes": [
+        {
+          "id": "co1",
+          "label": "CO1",
+          "description": "Describe the general architecture of a microcomputer system and architecture & organization of 8085 & 8086 Microprocessor."
+        },
+        {
+          "id": "co2",
+          "label": "CO2",
+          "description": "Understand the difference between 8085 and advanced microprocessor."
+        },
+        {
+          "id": "co3",
+          "label": "CO3",
+          "description": "Understand and classify the instruction set of 8085 microprocessor and distinguish the use of different instructions and apply it in assembly language programming."
+        },
+        {
+          "id": "co4",
+          "label": "CO4",
+          "description": "Recognize 8051 micro controller hardware, input/output pins, ports, external memory, counters and timers, instruction set, addressing modes, serial data i/o, interrupts."
+        },
+        {
+          "id": "co5",
+          "label": "CO5",
+          "description": "Understand and realize the Interfacing of memory & various I/O devices with 8085 microprocessors."
+        }
+      ],
+      "totalModules": 4,
+      "totalTopics": 28,
+      "modules": [
+        {
+          "id": "module-1",
+          "number": 1,
+          "roman": "I",
+          "hours": 10,
+          "title": "Introduction to Microcomputer Based System",
+          "topics": [
+            {
+              "id": "mp-m1-t1",
+              "title": "History of Evolution of Microprocessor and Microcontrollers"
+            },
+            {
+              "id": "mp-m1-t2",
+              "title": "Advantages and Disadvantages of Microprocessors and Microcontrollers"
+            },
+            {
+              "id": "mp-m1-t3",
+              "title": "Architecture of 8085 Microprocessor"
+            },
+            { "id": "mp-m1-t4", "title": "Pin Description of 8085" },
+            { "id": "mp-m1-t5", "title": "Address/Data Bus De-Multiplexing" },
+            {
+              "id": "mp-m1-t6",
+              "title": "Status Signals and the Control Signals"
+            },
+            {
+              "id": "mp-m1-t7",
+              "title": "Instruction Set of 8085 Microprocessors"
+            },
+            { "id": "mp-m1-t8", "title": "Addressing Modes" },
+            {
+              "id": "mp-m1-t9",
+              "title": "Timing Diagram of the Instructions (a few examples)"
+            }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-2",
+          "number": 2,
+          "roman": "II",
+          "hours": 10,
+          "title": "Assembly Language",
+          "topics": [
+            {
+              "id": "mp-m2-t1",
+              "title": "Assembly Language Programming with Examples"
+            },
+            { "id": "mp-m2-t2", "title": "Counter and Time Delays" },
+            { "id": "mp-m2-t3", "title": "Stack and Subroutine" },
+            {
+              "id": "mp-m2-t4",
+              "title": "Interrupts of 8085 Processor (Software and Hardware)"
+            },
+            { "id": "mp-m2-t5", "title": "I/O Device Interfacing" },
+            {
+              "id": "mp-m2-t6",
+              "title": "I/O Mapped I/O and Memory Mapped I/O"
+            },
+            {
+              "id": "mp-m2-t7",
+              "title": "Serial Communication Using SID and SOD Pins and RIM, SIM Instructions"
+            }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-3",
+          "number": 3,
+          "roman": "III",
+          "hours": 8,
+          "title": "8086 Microprocessor and 8051 Microcontroller",
+          "topics": [
+            { "id": "mp-m3-t1", "title": "8086 Microprocessor: Architecture" },
+            { "id": "mp-m3-t2", "title": "8086 Addressing Modes" },
+            { "id": "mp-m3-t3", "title": "8086 Interrupts" },
+            {
+              "id": "mp-m3-t4",
+              "title": "Introduction to 8051 Microcontroller: Architecture"
+            },
+            { "id": "mp-m3-t5", "title": "8051 Pin Details" },
+            { "id": "mp-m3-t6", "title": "8051 Addressing Modes" },
+            { "id": "mp-m3-t7", "title": "8051 Instruction Set" },
+            {
+              "id": "mp-m3-t8",
+              "title": "Examples of Simple Assembly Language"
+            }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        },
+        {
+          "id": "module-4",
+          "number": 4,
+          "roman": "IV",
+          "hours": 8,
+          "title": "Memory Interfacing",
+          "topics": [
+            {
+              "id": "mp-m4-t1",
+              "title": "Memory Interfacing with 8085 and 8086"
+            },
+            {
+              "id": "mp-m4-t2",
+              "title": "Support IC Chips: 8255, 8251, 8237/8257, 8259"
+            },
+            {
+              "id": "mp-m4-t3",
+              "title": "Interfacing of 8255 PPI with 8085 and Microcontroller 8051"
+            },
+            {
+              "id": "mp-m4-t4",
+              "title": "Brief Introduction to PIC Microcontroller (16F877)"
+            }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        }
+      ],
+      "books": [
+        "Microprocessor Architecture, Programming and Application with 8085 – R. Gaonkar, Penram International.",
+        "Fundamentals of Microprocessor and Microcontroller - B.Ram.",
+        "An Introduction to Microprocessor and Applications – Krishna Kant, Macmillan."
+      ],
+      "references": [
+        "Microprocessors and Microcontrollers - N. Senthil Kumar, M. Saravanan and Jeevananthan, Oxford University Press.",
+        "8086 Microprocessor – K Ayala, Cengage Learning.",
+        "Ray & Bhurchandi, Advanced Microprocessors & Peripherals, TMH.",
+        "The 8051 Microcontrollers – Uma Rao and Andhe Pallavi, Pearson.",
+        "The 8051 Microcontroller and Embedded System - Mazidi.",
+        "The 8051 Microcontroller - K. Ayala, Thomson."
+      ]
+    },
+    {
+      "id": "dbms-lab",
+      "code": "IT591",
+      "name": "Database Management System Lab",
+      "type": "lab",
+      "category": "Major",
+      "credits": 1.5,
+      "weeklyHours": { "L": 0, "T": 0, "P": 3, "total": 3 },
+      "icon": "server",
+      "color": "#3DB8FF",
+      "prerequisites": [
+        "Basic knowledge about electronics and logic design",
+        "Basic knowledge of data structure and programming concept"
+      ],
+      "objectives": "To develop conceptual understanding of database management system for solving different industry level problems & to learn its applications.",
+      "outcomes": [
+        {
+          "id": "co1",
+          "label": "CO1",
+          "description": "Applying SQL and PL/SQL for processing database."
+        },
+        {
+          "id": "co2",
+          "label": "CO2",
+          "description": "Analyze the database using queries to retrieve records."
+        },
+        {
+          "id": "co3",
+          "label": "CO3",
+          "description": "Develop solutions using database concepts for real time requirements."
+        },
+        {
+          "id": "co4",
+          "label": "CO4",
+          "description": "Students get practical knowledge on designing and creating relational database systems."
+        },
+        {
+          "id": "co5",
+          "label": "CO5",
+          "description": "Understand various advanced queries execution such as relational constraints, joins, set operations, aggregate functions, trigger, views and embedded SQL."
+        }
+      ],
+      "totalModules": 1,
+      "totalTopics": 16,
+      "modules": [
+        {
+          "id": "module-1",
+          "number": 1,
+          "roman": "I",
+          "hours": null,
+          "title": "Course Contents",
+          "topics": [
+            { "id": "dbmslab-t1", "title": "Study of Backend Tool – Oracle" },
+            {
+              "id": "dbmslab-t2",
+              "title": "Data Definition Language (DDL) Commands in RDBMS"
+            },
+            {
+              "id": "dbmslab-t3",
+              "title": "Data Manipulation Language (DML) and Data Control Language (DCL) Commands in RDBMS"
+            },
+            {
+              "id": "dbmslab-t4",
+              "title": "High-Level Language Extension with Cursors"
+            },
+            {
+              "id": "dbmslab-t5",
+              "title": "High Level Language Extension with Triggers"
+            },
+            { "id": "dbmslab-t6", "title": "Procedures and Functions" },
+            { "id": "dbmslab-t7", "title": "Embedded SQL" },
+            {
+              "id": "dbmslab-t8",
+              "title": "Database Design using E-R Model and Normalization"
+            },
+            {
+              "id": "dbmslab-t9",
+              "title": "Mini Project: Inventory Control System"
+            },
+            {
+              "id": "dbmslab-t10",
+              "title": "Mini Project: Material Requirement Processing"
+            },
+            {
+              "id": "dbmslab-t11",
+              "title": "Mini Project: Hospital Management System"
+            },
+            {
+              "id": "dbmslab-t12",
+              "title": "Mini Project: Railway Reservation System"
+            },
+            {
+              "id": "dbmslab-t13",
+              "title": "Mini Project: Personal Information System"
+            },
+            {
+              "id": "dbmslab-t14",
+              "title": "Mini Project: Web Based User Identification System"
+            },
+            {
+              "id": "dbmslab-t15",
+              "title": "Mini Project: Time-table Management System"
+            },
+            {
+              "id": "dbmslab-t16",
+              "title": "Application Development using Oracle and Visual Basic"
+            }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        }
+      ],
+      "books": [
+        "ORACLE PL/SQL by example. Benjamin Rosenzweig, Elena Silvestrova, Pearson Education 3rd Edition."
+      ],
+      "references": [
+        "ORACLE DATA BASE LOG PL/SQL Programming SCOTT URMAN, Tata Mc-Graw Hill.",
+        "SQL & PL/SQL for Oracle 10g, Black Book, Dr.P.S. Deshpande."
+      ]
+    },
+    {
+      "id": "cn-lab",
+      "code": "IT592",
+      "name": "Computer Networking Lab",
+      "type": "lab",
+      "category": "Major",
+      "credits": 1.5,
+      "weeklyHours": { "L": 0, "T": 0, "P": 3, "total": 3 },
+      "icon": "wifi",
+      "color": "#FF7B4F",
+      "prerequisites": ["Basic Operating System"],
+      "objectives": "Understanding the basic concept of different network models, explaining the network architecture, apply different computer routing algorithms in real life problems.",
+      "outcomes": [
+        {
+          "id": "co1",
+          "label": "CO1",
+          "description": "Analyse different network topologies and devices."
+        },
+        {
+          "id": "co2",
+          "label": "CO2",
+          "description": "Apply the concept of different type of networking for implementation."
+        },
+        {
+          "id": "co3",
+          "label": "CO3",
+          "description": "Implement and discuss the various services offered by transport layer such as TCP and UDP."
+        },
+        {
+          "id": "co4",
+          "label": "CO4",
+          "description": "Apply channel allocation, framing, error and flow control techniques."
+        },
+        {
+          "id": "co5",
+          "label": "CO5",
+          "description": "Apply the basics of networking protocols for solving real life networking problems."
+        }
+      ],
+      "totalModules": 1,
+      "totalTopics": 10,
+      "modules": [
+        {
+          "id": "module-1",
+          "number": 1,
+          "roman": "I",
+          "hours": null,
+          "title": "Course Contents",
+          "topics": [
+            {
+              "id": "cnlab-t1",
+              "title": "Familiarization with Different Networking Cables, Connectors, Hubs, Switches, Routers"
+            },
+            {
+              "id": "cnlab-t2",
+              "title": "NIC Installation & Configuration (Windows/Linux)"
+            },
+            {
+              "id": "cnlab-t3",
+              "title": "Understanding IP Address, Subnet – Connect Computers in Local Area Network"
+            },
+            {
+              "id": "cnlab-t4",
+              "title": "Study of Basic Network Configuration Commands"
+            },
+            {
+              "id": "cnlab-t5",
+              "title": "Configure a Network Topology using Packet Tracer Software"
+            },
+            {
+              "id": "cnlab-t6",
+              "title": "Link Layer Error Detection (CRC) and Error Control Mechanism (Selective Repeat, Go Back N)"
+            },
+            {
+              "id": "cnlab-t7",
+              "title": "Implementation of Data Link Layer Flow Control Mechanism (Stop & Wait, Sliding Window)"
+            },
+            {
+              "id": "cnlab-t8",
+              "title": "Server Setup/Configuration: FTP, TELNET, NFS, DNS, Firewall"
+            },
+            {
+              "id": "cnlab-t9",
+              "title": "TCP/UDP Socket Programming: Simple, TCP Based, UDP Based Multicast & Broadcast Sockets"
+            },
+            { "id": "cnlab-t10", "title": "CISCO Packet Tracer Example" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        }
+      ],
+      "books": [
+        "A. Forouzan – \"Data Communications and Networking (5th Ed.)\" – TMH.",
+        "W. Stallings – \"Data and Computer Communications (5th Ed.)\" – PHI/Pearson Education."
+      ],
+      "references": [
+        "A.S. Tanenbaum – \"Computer Networks (4th Ed.)\" – Pearson Education/PHI.",
+        "Black, Data & Computer Communication, PHI.",
+        "Zheng & Akhtar, Network for Computer Scientists & Engineers, OUP."
+      ]
+    },
+    {
+      "id": "daa-lab",
+      "code": "IT593",
+      "name": "Design Analysis of Algorithm Lab",
+      "type": "lab",
+      "category": "Major",
+      "credits": 1,
+      "weeklyHours": { "L": 0, "T": 0, "P": 2, "total": 2 },
+      "icon": "console",
+      "color": "#B44FF7",
+      "prerequisites": [
+        "Discrete Mathematics",
+        "Data Structure",
+        "Basic Programming Knowledge"
+      ],
+      "objectives": "To analyze and design algorithms, use different computational models, order notation and various complexity measures to analyze the performance of different algorithms.",
+      "outcomes": [
+        {
+          "id": "co1",
+          "label": "CO1",
+          "description": "Analyze algorithm to solve problems by iterative approach."
+        },
+        {
+          "id": "co2",
+          "label": "CO2",
+          "description": "Analyze algorithm to solve problems by divide and conquer approach."
+        },
+        {
+          "id": "co3",
+          "label": "CO3",
+          "description": "Implement algorithm to solve problems by Greedy algorithm approach."
+        },
+        {
+          "id": "co4",
+          "label": "CO4",
+          "description": "Apply algorithm to solve problems by Dynamic programming, backtracking, branch, and bound approach."
+        },
+        {
+          "id": "co5",
+          "label": "CO5",
+          "description": "Implement algorithm to solve problems by branch and bound approach."
+        }
+      ],
+      "totalModules": 1,
+      "totalTopics": 12,
+      "modules": [
+        {
+          "id": "module-1",
+          "number": 1,
+          "roman": "I",
+          "hours": null,
+          "title": "Lab Experiments",
+          "topics": [
+            {
+              "id": "daalab-t1",
+              "title": "Implement Merge Sort using Divide and Conquer Approach"
+            },
+            {
+              "id": "daalab-t2",
+              "title": "Implement Quick Sort using Divide and Conquer Approach"
+            },
+            {
+              "id": "daalab-t3",
+              "title": "Find the Minimum Number of Scalar Multiplication for Chain of Matrix using Dynamic Programming"
+            },
+            {
+              "id": "daalab-t4",
+              "title": "Implement All Pair Shortest Path for a Graph (Floyd-Warshall Algorithm) using Dynamic Programming"
+            },
+            {
+              "id": "daalab-t5",
+              "title": "Implement Traveling Salesman Problem using Dynamic Programming"
+            },
+            {
+              "id": "daalab-t6",
+              "title": "Implement Single Source Shortest Path for a Graph using Bellman Ford Algorithm"
+            },
+            {
+              "id": "daalab-t7",
+              "title": "Implement 15 Puzzle Problem using Branch and Bound Technique"
+            },
+            {
+              "id": "daalab-t8",
+              "title": "Implement 8 Queen Problem using Backtracking"
+            },
+            {
+              "id": "daalab-t9",
+              "title": "Implement any one using Backtracking: Graph Coloring Problem or Hamiltonian Problem"
+            },
+            {
+              "id": "daalab-t10",
+              "title": "Implement any one using Greedy Method: Knapsack Problem or Job Sequencing with Deadlines"
+            },
+            {
+              "id": "daalab-t11",
+              "title": "Implement KMP Algorithm for String Matching"
+            },
+            {
+              "id": "daalab-t12",
+              "title": "Implement Ford Fulkerson Algorithm"
+            }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        }
+      ],
+      "books": [
+        "Hopcroft and J. Ullman \"The Design and Analysis of Algorithms\".",
+        "D. E. Knuth \"The Art of Computer Programming\", Vol. 3.",
+        "E. Horowitz and Shani \"Fundamentals of Computer Algorithms\"."
+      ],
+      "references": []
+    },
+    {
+      "id": "ai-lab",
+      "code": "IT594",
+      "name": "Artificial Intelligence Lab",
+      "type": "lab",
+      "category": "Major",
+      "credits": 1.5,
+      "weeklyHours": { "L": 0, "T": 0, "P": 3, "total": 3 },
+      "icon": "lightning-bolt-outline",
+      "color": "#F7D44F",
+      "prerequisites": [
+        "Data Structure",
+        "Design and Analysis of Algorithms",
+        "Statistics"
+      ],
+      "objectives": "Gain foundational knowledge of PROLOG to implementing Artificial Intelligent Agent as an executable computer program for Knowledge Representation and Inference.",
+      "outcomes": [
+        {
+          "id": "co1",
+          "label": "CO1",
+          "description": "Acquire foundational knowledge of PROLOG to implement an Artificial Intelligent Agent as an executable computer program for Knowledge Representation and Inferencing and understand the working principle of the agent and assess its utilitarian importance in current technological context leading towards lifelong learning."
+        },
+        {
+          "id": "co2",
+          "label": "CO2",
+          "description": "Identify and formulate an engineering problem by analyzing its characteristics to fit a State-Space Exploration Framework or an Inferencing Agent Formulation Framework in Artificial Intelligence."
+        },
+        {
+          "id": "co3",
+          "label": "CO3",
+          "description": "Explore relevant literature and apply the concepts of Artificial Intelligence to solve a problem by implementing well-known AI strategies using proper techniques and tools of PROLOG."
+        },
+        {
+          "id": "co4",
+          "label": "CO4",
+          "description": "Develop ideas and propose expert systems offering solutions to the challenging problems of Artificial Intelligence."
+        }
+      ],
+      "totalModules": 1,
+      "totalTopics": 12,
+      "modules": [
+        {
+          "id": "module-1",
+          "number": 1,
+          "roman": "I",
+          "hours": null,
+          "title": "Weekly Lab Schedule",
+          "topics": [
+            {
+              "id": "ailab-t1",
+              "title": "Week 1: Introduction to PROLOG Programming, IDE and Its Basic Components – Knowledge Representation and Inferencing"
+            },
+            {
+              "id": "ailab-t2",
+              "title": "Week 2: Arithmetic, Boolean Expression, Decision Making Strategies"
+            },
+            {
+              "id": "ailab-t3",
+              "title": "Week 3: Recursion and Looping through Recursion"
+            },
+            {
+              "id": "ailab-t4",
+              "title": "Week 4: List of Data Items in PROLOG"
+            },
+            {
+              "id": "ailab-t5",
+              "title": "Week 5: Blind Search Techniques – BFS, DFS (8-Puzzle, Water Jug Puzzle)"
+            },
+            {
+              "id": "ailab-t6",
+              "title": "Week 6: Heuristic Search Techniques – A* Search (8-Puzzle, Route Finding Puzzle)"
+            },
+            {
+              "id": "ailab-t7",
+              "title": "Week 7: Constraint Satisfaction Problem Solving (Graph Coloring Problem, 8-Queens Problem)"
+            },
+            {
+              "id": "ailab-t8",
+              "title": "Week 8: Game Playing – Adversarial Search with Alpha-Beta Pruning (Tic-Tac-Toe)"
+            },
+            {
+              "id": "ailab-t9",
+              "title": "Week 9: Discussion on Project Problems and Allocation (Problem Description Report Submission)"
+            },
+            {
+              "id": "ailab-t10",
+              "title": "Week 10: Designing Solution Model and Proposal Report Submission"
+            },
+            {
+              "id": "ailab-t11",
+              "title": "Week 11: Project Implementation, Verification and Documentation"
+            },
+            {
+              "id": "ailab-t12",
+              "title": "Week 12: Project Demonstration and Project Report Review"
+            }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        }
+      ],
+      "books": [
+        "Ivan Bratko, Prolog Programming for Artificial Intelligence, 4th Edition, Addison Wesley.",
+        "Russell, S. and Norvig, P. 2015. Artificial Intelligence - A Modern Approach, 3rd Edition, Prentice Hall.",
+        "Rich, E., Knight, K and Shankar, B. 2009. Artificial Intelligence, 3rd edition, Tata McGrawHill."
+      ],
+      "references": [
+        "Padhy, N.P. 2009. Artificial Intelligence and Intelligent Systems, Oxford University Press.",
+        "Deepak Khemani, \"A First Course in Artificial Intelligence\", McGraw Hill."
+      ]
+    },
+    {
+      "id": "ecommerce-erp-lab",
+      "code": "IT595A",
+      "name": "E-Commerce and ERP Lab",
+      "type": "lab",
+      "category": "Minor",
+      "credits": 1,
+      "weeklyHours": { "L": 0, "T": 0, "P": 2, "total": 2 },
+      "icon": "web",
+      "color": "#4FF7E0",
+      "prerequisites": [
+        "Object Oriented Programming",
+        "Computer Networking",
+        "Web Application Development",
+        "Database Management System"
+      ],
+      "objectives": "Understanding basic concept of object-oriented programming and PHP framework, Explaining the client-side components, Applying the PHP web application development concept in web application development.",
+      "outcomes": [
+        {
+          "id": "co1",
+          "label": "CO1",
+          "description": "Understand the concept of PHP framework."
+        },
+        {
+          "id": "co2",
+          "label": "CO2",
+          "description": "Analyzing different client and server-side components for developing application."
+        },
+        {
+          "id": "co3",
+          "label": "CO3",
+          "description": "Apply different concept for developing MVC application."
+        },
+        {
+          "id": "co4",
+          "label": "CO4",
+          "description": "Implement the solution to real life problem using PHP concepts."
+        },
+        {
+          "id": "co5",
+          "label": "CO5",
+          "description": "Apply different tools used in ERP."
+        }
+      ],
+      "totalModules": 1,
+      "totalTopics": 13,
+      "modules": [
+        {
+          "id": "module-1",
+          "number": 1,
+          "roman": "I",
+          "hours": null,
+          "title": "Course Contents",
+          "topics": [
+            {
+              "id": "eclab-t1",
+              "title": "Introduction to PHP: Evaluation, Basic Syntax, Variable Constant, Data Types, Control Structure, Function, Array, String"
+            },
+            {
+              "id": "eclab-t2",
+              "title": "Web Designing: Introduction to HTML, HTML Tags, Creating Forms, Creating Tables, Managing Home Page, JavaScript, CSS"
+            },
+            {
+              "id": "eclab-t3",
+              "title": "Database Connectivity with MySQL: Introduction to RDBMS, Connection with MySQL Database"
+            },
+            {
+              "id": "eclab-t4",
+              "title": "Performing Basic Database Operations (DML): Insert, Delete, Update, Select"
+            },
+            {
+              "id": "eclab-t5",
+              "title": "Setting Query Parameter, Executing Query Join: Cross Joins, Inner Joins, Outer Joins, Self Joins"
+            },
+            {
+              "id": "eclab-t6",
+              "title": "E-Commerce/M-Commerce Applications: Online Store"
+            },
+            {
+              "id": "eclab-t7",
+              "title": "Online Banking and Credit Card Transaction Processing"
+            },
+            { "id": "eclab-t8", "title": "Comparison Shopping in B2C" },
+            { "id": "eclab-t9", "title": "Exchanges Handling in B2B" },
+            {
+              "id": "eclab-t10",
+              "title": "Interaction Examples: Virtual Shopping Carts"
+            },
+            {
+              "id": "eclab-t11",
+              "title": "Database Connectivity with MySQL: Insert, Delete, Update, Select"
+            },
+            {
+              "id": "eclab-t12",
+              "title": "Executing Query Join: Cross Joins, Inner Joins, Outer Joins, Self Joins"
+            },
+            { "id": "eclab-t13", "title": "PHP MVC Application Development" }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        }
+      ],
+      "books": ["PhP Complete Reference Steven Holzner."],
+      "references": ["Programming PHP Kevin Tatroe."]
+    },
+    {
+      "id": "mad-lab",
+      "code": "IT595B",
+      "name": "Mobile Application Development Lab",
+      "type": "lab",
+      "category": "Minor",
+      "credits": 1,
+      "weeklyHours": { "L": 0, "T": 0, "P": 2, "total": 2 },
+      "icon": "cellphone-cog",
+      "color": "#4FF77B",
+      "prerequisites": ["Basic knowledge on programming and database concepts"],
+      "objectives": "This is a practical course on Mobile Application Development and student will learn how to program in Android Platform and develop applications using SQLite that run on Android Operating System.",
+      "outcomes": [
+        {
+          "id": "co1",
+          "label": "CO1",
+          "description": "Design and develop user interfaces for mobile apps using basic building blocks, UI components and application structure."
+        },
+        {
+          "id": "co2",
+          "label": "CO2",
+          "description": "Write simple programs and develop small applications using the concepts of UI design, layouts and preferences."
+        },
+        {
+          "id": "co3",
+          "label": "CO3",
+          "description": "Develop applications with multiple activities using intents, array adapter, exceptions and options menu."
+        },
+        {
+          "id": "co4",
+          "label": "CO4",
+          "description": "Implement activities with dialogs, spinner, fragments and navigation drawer by applying themes."
+        },
+        {
+          "id": "co5",
+          "label": "CO5",
+          "description": "Develop mobile applications using SQLite."
+        }
+      ],
+      "totalModules": 1,
+      "totalTopics": 11,
+      "modules": [
+        {
+          "id": "module-1",
+          "number": 1,
+          "roman": "I",
+          "hours": null,
+          "title": "Course Contents",
+          "topics": [
+            {
+              "id": "madlab-t1",
+              "title": "Fundamentals: Activities, Services, Broadcast Receivers and Content Providers, UI Components – Views and Notifications, Intents and Intent Filters"
+            },
+            {
+              "id": "madlab-t2",
+              "title": "Application Structure: AndroidManifest.xml, User-Permission, SDK, Resources and R.java, Assets, Layouts and Drawable Resources, Activities and Activity Lifecycle"
+            },
+            {
+              "id": "madlab-t3",
+              "title": "Emulator-Android Virtual Device: Launching Emulator, Editing Emulator Settings, Emulator Shortcuts, Logcat Usage, Introduction to DDMS"
+            },
+            {
+              "id": "madlab-t4",
+              "title": "Basic UI Design: Form Widgets, Text Fields, Validation of EditText, Layouts, [dip, dp, sip, sp] versus px"
+            },
+            {
+              "id": "madlab-t5",
+              "title": "Preferences: Shared Preferences, Preferences from XML"
+            },
+            {
+              "id": "madlab-t6",
+              "title": "Menu: Option Menu, Context Menu, Menu from XML, Menu via Code"
+            },
+            {
+              "id": "madlab-t7",
+              "title": "Intents: Explicit Intents, Implicit Intents"
+            },
+            {
+              "id": "madlab-t8",
+              "title": "UI Design: Time and Date, Images and Media, Android Adapter and ListView, Composite, Alert Dialogs and Toast, Popup, Fragments, Navigation Drawer"
+            },
+            {
+              "id": "madlab-t9",
+              "title": "Tabs, Tab Activity Styles & Themes: styles.xml, Drawable Resources for Shapes, Gradients (Selectors), Style Attribute in Layout File, Applying Themes via Code and Manifest File"
+            },
+            {
+              "id": "madlab-t10",
+              "title": "Content Providers: SQLite Programming, SQLite Open Helper, SQLite Database, Cursor, Reading and Updating Contacts, Reading Bookmarks"
+            },
+            {
+              "id": "madlab-t11",
+              "title": "Deploying and Testing Android Applications"
+            }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        }
+      ],
+      "books": [
+        "Joseph Annuzzi Jr, Lauren Darcey, Shane Condor, \"Advanced Android Application Development, Developers Library\", Pearson Education, 4th Edition (2015).",
+        "Lauren Darcey, Shane Condor, \"Android, Wireless Application Development\", Pearson Education, 3rd Edition.",
+        "Paul Deitel, Harvey Deitel, Alexander Wald, \"Android 6 for Programmers, An AppDriven Approach\", Pearson Education."
+      ],
+      "references": []
+    },
+    {
+      "id": "microprocessor-lab",
+      "code": "IT595C",
+      "name": "Microprocessor and Microcontroller Lab",
+      "type": "lab",
+      "category": "Minor",
+      "credits": 1,
+      "weeklyHours": { "L": 0, "T": 0, "P": 2, "total": 2 },
+      "icon": "chip",
+      "color": "#FF4F9A",
+      "prerequisites": ["Basic Knowledge of Digital Electronics"],
+      "objectives": "To apply Assembly Level Programming for arithmetic-logical solutions and also to interpret the interfacing programming by conducting experiments.",
+      "outcomes": [
+        {
+          "id": "co1",
+          "label": "CO1",
+          "description": "Solve small assignments using the 8085 basic instruction sets and memory mapping through trainer kit and simulator."
+        },
+        {
+          "id": "co2",
+          "label": "CO2",
+          "description": "Write 8085 assembly language programs like Addition, Subtraction, Multiplication, Square, Complement, look up table, Copying a block of memory, Shifting, Packing and unpacking of BCD numbers, Ascending order, Descending order etc. using trainer kit."
+        },
+        {
+          "id": "co3",
+          "label": "CO3",
+          "description": "Validate the interfacing technique using 8255 trainer kit through subroutine calls."
+        },
+        {
+          "id": "co4",
+          "label": "CO4",
+          "description": "IN/OUT instructions like glowing LEDs accordingly, stepper motor rotation etc."
+        },
+        {
+          "id": "co5",
+          "label": "CO5",
+          "description": "Test fundamental of 8051 programs using the trainer kit."
+        }
+      ],
+      "totalModules": 1,
+      "totalTopics": 7,
+      "modules": [
+        {
+          "id": "module-1",
+          "number": 1,
+          "roman": "I",
+          "hours": null,
+          "title": "Course Contents",
+          "topics": [
+            {
+              "id": "mplab-t1",
+              "title": "Familiarization with 8085 Register Level Architecture, Basic Instruction Sets (Data Transfer, Arithmetic, Logical, Branching) and Trainer Kit Components Including Memory Map"
+            },
+            {
+              "id": "mplab-t2",
+              "title": "Familiarization with Storing, Executing and Viewing Contents of Memory and Registers in Trainer Kit 8085 and Simulator through Small Assignments"
+            },
+            {
+              "id": "mplab-t3",
+              "title": "Programming using 8085 Kit and Simulator: Addition, Subtraction, Multiplication by Repeated Addition, Square, Complement, Look Up Table, Copying a Block of Memory, Shifting, Packing and Unpacking of BCD Numbers, BCD Number Addition, Binary to ASCII Conversion, Smallest and Largest Number from Array, Ascending Order, Descending Order, String Matching, Multiplication using Shift and Add Method"
+            },
+            {
+              "id": "mplab-t4",
+              "title": "Program using Subroutine Calls and IN/OUT Instructions using 8255 PPI: Subroutine for Delay, Reading Switch State and Glowing LEDs, Glowing of Seven Segment Display"
+            },
+            {
+              "id": "mplab-t5",
+              "title": "Program for Serial Communication between Two Trainer Kits"
+            },
+            {
+              "id": "mplab-t6",
+              "title": "Interfacing of 8255: Keyboard, Stepper Motor Rotation"
+            },
+            {
+              "id": "mplab-t7",
+              "title": "Study of 8051 Micro Controller Kit and Writing Programs"
+            }
+          ],
+          "resources": [],
+          "notes": [],
+          "assignments": [],
+          "pyqs": []
+        }
+      ],
+      "books": [
+        "Microprocessor Architecture, Programming and Application with 8085 – R. Gaonkar, Penram International.",
+        "Fundamentals of Microprocessor and Microcontroller - B.Ram."
+      ],
+      "references": [
+        "Microprocessors and Microcontrollers - N. Senthil Kumar, M. Saravanan and Jeevananthan, Oxford University Press.",
+        "8086 Microprocessor – K Ayala, Cengage Learning.",
+        "Ray & Bhurchandi, Advanced Microprocessors & Peripherals, TMH.",
+        "The 8051 Microcontroller and Embedded System - Mazidi."
+      ]
+    },
+    {
+      "id": "minor-project",
+      "code": "IT581",
+      "name": "Minor Project-I",
+      "type": "project",
+      "category": "Project",
+      "credits": 1,
+      "weeklyHours": { "L": 0, "T": 0, "P": 0, "total": 2 },
+      "icon": "rocket-outline",
+      "color": "#A0A0A0",
+      "prerequisites": [],
+      "objectives": "Independent minor project to be completed by the student.",
+      "outcomes": [],
+      "totalModules": 0,
+      "totalTopics": 0,
+      "modules": [],
+      "books": [],
+      "references": []
+    }
+  ]
+}

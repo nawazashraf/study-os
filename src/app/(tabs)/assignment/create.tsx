@@ -7,9 +7,12 @@ import PrioritySelector from "@/components/assignment/PrioritySelector";
 import { createAssignment } from "@/database/assignmentService";
 import { AssignmentForm, FormErrors } from "@/types/assignment";
 import { validate } from "@/utils/assignmentValidation";
+import { cleanFileName } from "@/utils/cleanFileName";
 import * as DocumentPicker from "expo-document-picker";
 import { useRouter } from "expo-router";
-import { useState } from "react";
+import { useShareIntentContext } from "expo-share-intent";
+import { useLocalSearchParams } from "expo-router";
+import { useEffect, useState } from "react";
 import {
   Alert,
   ScrollView,
@@ -20,16 +23,60 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-const INITIAL_FORM: AssignmentForm = {
-  title: "",
-  subjectId: null,
-  dueDate: new Date(),
-  priority: "",
-  attachment: null,
-};
-
 const CreateAssignment = () => {
-  const [form, setForm] = useState<AssignmentForm>(INITIAL_FORM);
+  // const { fileUri, fileName, mimeType } = useLocalSearchParams();
+  const { shareIntent, resetShareIntent } = useShareIntentContext();
+  const sharedFile = shareIntent?.files?.[0];
+
+  const { fileUri, fileName, mimeType } = useLocalSearchParams();
+
+  const importedFromShare = !!sharedFile || !!fileUri;
+
+  const [form, setForm] = useState<AssignmentForm>({
+    title: "",
+    subjectId: null,
+    dueDate: new Date(),
+    priority: "",
+    attachment: null,
+  });
+
+  useEffect(() => {
+    if (!sharedFile) return;
+
+    setForm((prev) => {
+      if (prev.attachment) return prev;
+
+      return {
+        ...prev,
+        title: cleanFileName(sharedFile.fileName),
+        attachment: {
+          uri: sharedFile.path,
+          name: sharedFile.fileName,
+          mimeType: sharedFile.mimeType,
+        },
+      };
+    });
+  }, [sharedFile]);
+
+  // If ShareHandler navigated with params, use them as a fallback
+  useEffect(() => {
+    if (!fileUri || !fileName) return;
+
+    setForm((prev) => {
+      if (prev.attachment) return prev;
+
+      return {
+        ...prev,
+        title: cleanFileName(String(fileName)),
+        attachment: {
+          uri: String(fileUri),
+          name: String(fileName),
+          mimeType: String(mimeType) || undefined,
+        },
+      };
+    });
+  }, [fileUri, fileName, mimeType]);
+
   const [errors, setErrors] = useState<FormErrors>({});
 
   const router = useRouter();
@@ -85,11 +132,19 @@ const CreateAssignment = () => {
       });
 
       if (insertedId) {
-        setForm(INITIAL_FORM);
+        setForm({
+          title: "",
+          subjectId: null,
+          dueDate: new Date(),
+          priority: "",
+          attachment: null,
+        });
+
+        // resetShareIntent?.();
         setErrors({});
         Alert.alert("Saved", "Assignment added successfully.");
 
-        if (router.canGoBack()) {
+        if (router.canGoBack && router.canGoBack()) {
           router.back();
         } else {
           router.replace("/(tabs)/assignment");
@@ -108,13 +163,21 @@ const CreateAssignment = () => {
       multiple: false,
     });
 
-    if (result.canceled) return;
+    // Handle different result shapes across SDK versions
+    // - new shape: { canceled: boolean, assets: [...] }
+    // - legacy shape: { type: 'success'|'cancel', name, uri, size, mimeType }
+    const anyResult = result as any;
 
-    const file = result.assets[0];
+    if (("canceled" in anyResult && anyResult.canceled) || (anyResult.type === "cancel")) {
+      return;
+    }
+
+    const file = anyResult.assets?.[0] ?? anyResult;
+    if (!file) return;
 
     update("attachment", {
-      name: file.name,
-      uri: file.uri,
+      name: file.name ?? file.fileName,
+      uri: file.uri ?? file.uri,
       size: file.size,
       mimeType: file.mimeType,
     });
@@ -170,9 +233,21 @@ const CreateAssignment = () => {
             />
           </View>
 
-          {/* Document */}
           <View>
             <FieldLabel label="Document" />
+
+            {importedFromShare && (
+              <View className="mb-3 rounded-2xl border border-green-500/30 bg-green-500/10 p-4">
+                <Text className="font-semibold text-green-500">
+                  ✓ Imported from another app
+                </Text>
+
+                <Text className="mt-1 text-sm text-muted">
+                  The attachment has already been added.
+                </Text>
+              </View>
+            )}
+
             <DocumentCard
               attachment={form.attachment}
               onAttach={handleAttach}

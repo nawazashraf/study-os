@@ -1,25 +1,52 @@
 import { db } from "./db";
 
 export const initDB = () => {
+  db.execSync("PRAGMA journal_mode = WAL;");
+
   db.execSync(`
-    PRAGMA journal_mode = WAL;
-
     CREATE TABLE IF NOT EXISTS notes (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      title TEXT NOT NULL,
-      description TEXT NOT NULL,
-      createdAt TEXT NOT NULL
-    );
-
-    CREATE TABLE IF NOT EXISTS attendance (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      date TEXT NOT NULL,
-      routineId INTEGER NOT NULL,
-      status TEXT NOT NULL CHECK(status IN ('present', 'absent')),
-      createdAt TEXT DEFAULT CURRENT_TIMESTAMP,
-      UNIQUE(date, routineId)
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    description TEXT NOT NULL,
+    createdAt TEXT NOT NULL
     );
   `);
+
+  db.execSync(`
+    CREATE TABLE IF NOT EXISTS attendance (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    date TEXT NOT NULL,
+    routineId INTEGER NOT NULL,
+    status TEXT NOT NULL CHECK(status IN ('present', 'absent')),
+    createdAt TEXT DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(date, routineId)
+    );
+  `);
+
+  db.execSync(`
+    CREATE TABLE IF NOT EXISTS topic_progress (
+    topic_id TEXT PRIMARY KEY,
+    completed INTEGER NOT NULL DEFAULT 0,
+    completed_at INTEGER
+    );
+  `);
+
+  db.execSync(`
+    CREATE TABLE IF NOT EXISTS activities (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+    category TEXT NOT NULL,
+    title TEXT NOT NULL,
+    duration INTEGER NOT NULL,
+
+    notes TEXT,
+
+    activityDate TEXT NOT NULL,
+
+    createdAt TEXT NOT NULL,
+    updatedAt TEXT NOT NULL
+  );  
+  `)
 
   const existingTable = db.getAllSync<{ name: string }>(
     "SELECT name FROM sqlite_master WHERE type='table' AND name='assignments'",

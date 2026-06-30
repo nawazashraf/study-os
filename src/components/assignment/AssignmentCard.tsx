@@ -38,7 +38,7 @@ export const AssignmentCard = ({ data }: { data: Assignment }) => {
           </Text>
         </View>
         <Text className="text-white">{data.title}</Text>
-        <Text className="text-muted">Due in {getDueInDays(data.dueDate)}</Text>
+        <Text className="text-muted">{getDueInDays(data.dueDate)}</Text>
       </View>
       {/* Priority  */}
       <View className={`${STYLES["Medium"].bg} px-3 py-2 rounded-full`}>

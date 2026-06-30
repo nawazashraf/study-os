@@ -1,5 +1,5 @@
 import { useLocalSearchParams } from "expo-router";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   View,
   Text,
@@ -12,37 +12,91 @@ import {
 } from "react-native";
 import * as FileSystem from "expo-file-system/legacy";
 import { SafeAreaView } from "react-native-safe-area-context";
+import * as Sharing from "expo-sharing";
+import * as IntentLauncher from "expo-intent-launcher";
 
 export default function PdfScreen() {
   const { uri } = useLocalSearchParams<{ uri?: string }>();
   const [opening, setOpening] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [debugInfo, setDebugInfo] = useState<Record<string, any>>({});
+  const intentPendingRef = useRef(false);
 
   const openPdf = async () => {
+    if (intentPendingRef.current) return;
+    intentPendingRef.current = true;
     if (!uri) return;
 
+    let original = String(uri);
     try {
       setOpening(true);
-      let openUri = uri;
+      original = String(uri);
+      let openUri = original;
 
-      if (Platform.OS === "android" && uri.startsWith("file://")) {
-        const contentUri = await FileSystem.getContentUriAsync(uri);
-        if (contentUri) {
-          openUri = contentUri;
+      // Normalize plain file paths (e.g. /data/...) to file:// scheme
+      let contentUri: string | null = null;
+      if (Platform.OS === "android") {
+        if (!openUri.startsWith("file://") && !openUri.startsWith("content://")) {
+          openUri = `file://${openUri}`;
+        }
+
+        // Convert file:// URIs to content:// URIs which are safe to share with other apps
+        if (openUri.startsWith("file://")) {
+          try {
+            contentUri = await FileSystem.getContentUriAsync(openUri);
+            if (contentUri) openUri = contentUri;
+          } catch (e) {
+            // getContentUriAsync may fail on some devices; fall back to file:// URI
+            contentUri = null;
+          }
         }
       }
 
-      const supported = await Linking.canOpenURL(openUri);
-      if (!supported) {
-        throw new Error("This device cannot open the provided document URI.");
+      const encoded = encodeURI(openUri);
+      const canOpenEncoded = await Linking.canOpenURL(encoded).catch(() => false);
+      const canOpenRaw = await Linking.canOpenURL(openUri).catch(() => false);
+
+      // Save debug info
+      setDebugInfo({ original, openUri, contentUri, canOpenEncoded, canOpenRaw });
+
+      // On Android, use a direct intent with read permission flags for private content URIs.
+      if (Platform.OS === "android") {
+        try {
+          const intentParams = {
+            data: openUri,
+            type: "application/pdf",
+            flags: 1 | 268435456, // FLAG_GRANT_READ_URI_PERMISSION | FLAG_ACTIVITY_NEW_TASK
+          };
+          await IntentLauncher.startActivityAsync("android.intent.action.VIEW", intentParams);
+          return;
+        } catch (intentErr) {
+          console.warn("Intent launch failed:", intentErr);
+        }
       }
 
-      await Linking.openURL(openUri);
+      if (!canOpenEncoded && !canOpenRaw) {
+        // Try opening directly even if canOpenURL said false (some providers don't advertise support)
+        await Linking.openURL(openUri);
+        return;
+      }
+
+      await Linking.openURL(canOpenEncoded ? encoded : openUri);
     } catch (err) {
       const message = err instanceof Error ? err.message : String(err);
       setError(message);
       Alert.alert("Unable to open PDF", message);
+
+      // Fallback: try share sheet so user can open with another app
+      try {
+        const available = await Sharing.isAvailableAsync();
+        if (available) {
+          await Sharing.shareAsync(original);
+        }
+      } catch (shareErr) {
+        // ignore
+      }
     } finally {
+      intentPendingRef.current = false;
       setOpening(false);
     }
   };
@@ -78,6 +132,14 @@ export default function PdfScreen() {
               <Text style={styles.buttonText}>Open PDF</Text>
             </Pressable>
             {error ? <Text style={styles.errorText}>{error}</Text> : null}
+            {Object.keys(debugInfo).length > 0 && (
+              <View style={{ marginTop: 20, alignItems: "flex-start" }}>
+                <Text style={{ color: "#fff", marginBottom: 8 }}>Debug info:</Text>
+                <Text style={{ color: "#9CA3AF", fontSize: 12 }}>
+                  {JSON.stringify(debugInfo, null, 2)}
+                </Text>
+              </View>
+            )}
           </>
         )}
       </View>
