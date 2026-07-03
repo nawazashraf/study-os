@@ -64,7 +64,7 @@ const AssignmentDetails = () => {
       edges={["top"]}
     >
       <View className="bg-background flex-1">
-        <Header />
+        <Header handleDelete={handleDelete} />
 
         <View className="flex-1 p-5 gap-y-5">
           {/* Subject */}
@@ -94,7 +94,7 @@ const AssignmentDetails = () => {
 
           {/* Priority */}
           <View className="flex-row items-center">
-            <Ionicons name="flag-outline" size={20} color="white" />
+            <Ionicons name="school-outline" size={20} color="white" />
             <Text className="text-text ml-2">{assignment.priority}</Text>
           </View>
 
@@ -105,7 +105,7 @@ const AssignmentDetails = () => {
             {assignment.attachmentName ? (
               <Pressable
                 onPress={handleOpenPdf}
-                className="bg-surface rounded-2xl p-4 flex-row items-center"
+                className="bg-surface rounded-2xl p-4 flex-row items-center mt-1"
               >
                 <Ionicons
                   name="document-text-outline"
@@ -134,12 +134,6 @@ const AssignmentDetails = () => {
               <Text className="text-white font-semibold">
                 Mark as Completed
               </Text>
-            </Pressable>
-            <Pressable
-              onPress={handleDelete}
-              className="bg-red-600 rounded-2xl py-4 items-center"
-            >
-              <Text className="text-white font-semibold">Delete Assignment</Text>
             </Pressable>
           </View>
         </View>
