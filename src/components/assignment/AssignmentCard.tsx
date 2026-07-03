@@ -19,7 +19,7 @@ export const AssignmentCard = ({ data }: { data: Assignment }) => {
           },
         })
       }
-      className="bg-surface flex flex-row items-center px-4 py-3 rounded-2xl h-28"
+      className="bg-surface flex flex-row items-center px-4 py-3 rounded-2xl h-28 my-2"
     >
       {/* Icon */}
       <View>
