@@ -77,7 +77,7 @@ const Note = () => {
             data={filteredNotes}
             keyExtractor={(item) => item.id.toString()}
             ListEmptyComponent={() => (
-              <View>
+              <View className="flex-1 flex-row justify-center items-center">
                 <Text className="text-white">Empty Notes</Text>
               </View>
             )}
