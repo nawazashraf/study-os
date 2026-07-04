@@ -2,19 +2,34 @@ import { Header } from "@/components/assignment/Header";
 import {
   deleteAssignment,
   getAssignmentById,
+  updateAssignmentCompletion,
 } from "@/database/assignmentService";
+import { Assignment } from "@/types/assignment";
 import { getDueInDays } from "@/utils/getDueInDays";
 import { getSubjectColor } from "@/utils/getSubjectColor";
 import { getSubjectName } from "@/utils/getSubjectName";
 import { Ionicons } from "@expo/vector-icons";
 import { useLocalSearchParams, useRouter } from "expo-router";
+import { useEffect, useState } from "react";
 import { Alert, Pressable, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const AssignmentDetails = () => {
   const { id } = useLocalSearchParams();
 
-  const assignment = getAssignmentById(Number(id));
+  // const assignment = getAssignmentById(Number(id));
+
+  const [assignment, setAssignment] = useState<Assignment | null>(null);
+
+  useEffect(() => {
+    loadAssignment();
+  }, []);
+
+  const loadAssignment = async () => {
+    const data = await getAssignmentById(Number(id));
+    setAssignment(data);
+  };
+
   const router = useRouter();
 
   const handleOpenPdf = () => {
@@ -49,6 +64,16 @@ const AssignmentDetails = () => {
         },
       ],
     );
+  };
+
+  const handleAssignmentCompletionUpdate = async () => {
+    if (!assignment) return;
+    await updateAssignmentCompletion(
+      assignment?.completed ? false : true,
+      assignment?.id,
+    );
+    await loadAssignment();
+    router.replace("/(tabs)/assignment");
   };
 
   if (!assignment) {
@@ -130,9 +155,14 @@ const AssignmentDetails = () => {
 
           {/* Status */}
           <View className="mt-auto space-y-3">
-            <Pressable className="bg-primary rounded-2xl py-4 items-center">
+            <Pressable
+              onPress={handleAssignmentCompletionUpdate}
+              className="bg-primary rounded-2xl py-4 items-center"
+            >
               <Text className="text-white font-semibold">
-                Mark as Completed
+                {assignment.completed
+                  ? "Mark as Incomplete"
+                  : "Mark as Completed"}
               </Text>
             </Pressable>
           </View>

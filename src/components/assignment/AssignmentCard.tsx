@@ -19,7 +19,7 @@ export const AssignmentCard = ({ data }: { data: Assignment }) => {
           },
         })
       }
-      className="bg-surface flex flex-row items-center px-4 py-3 rounded-2xl h-28 my-2"
+      className={`${data.completed ? "opacity-55" : ""} bg-surface flex flex-row items-center px-4 py-3 rounded-2xl h-28 my-2`}
     >
       {/* Icon */}
       <View>
@@ -38,7 +38,11 @@ export const AssignmentCard = ({ data }: { data: Assignment }) => {
           </Text>
         </View>
         <Text className="text-white">{data.title}</Text>
-        <Text className="text-muted">{getDueInDays(data.dueDate)}</Text>
+        <Text
+          className={`${data.completed ? "text-green-500  font-bold" : "text-muted"}`}
+        >
+          {data.completed ? "Submitted" : getDueInDays(data.dueDate)}
+        </Text>
       </View>
       {/* Priority  */}
       <View className={`${STYLES["Medium"].bg} px-3 py-2 rounded-full`}>

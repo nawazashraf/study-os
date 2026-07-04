@@ -1,5 +1,6 @@
 import { AssignmentCard } from "@/components/assignment/AssignmentCard";
 import { useAssignment } from "@/hooks/useAssignment";
+import { Assignment } from "@/types/assignment";
 import { Ionicons } from "@expo/vector-icons";
 import { useFocusEffect, useRouter } from "expo-router";
 import { useCallback } from "react";
@@ -17,6 +18,9 @@ const CreateAssignment = () => {
   );
 
   const router = useRouter();
+
+  const pendingAssignment = assignment.filter((item) => !item.completed);
+  const completedAssignment = assignment.filter((item) => item.completed);
 
   const handleAddAssignmentPress = () => {
     router.push("/(tabs)/assignment/create");
@@ -50,10 +54,17 @@ const CreateAssignment = () => {
           ))} */}
 
           <FlatList
-            data={assignment}
+            data={pendingAssignment}
             keyExtractor={(item) => item.id.toString()}
             renderItem={({ item }) => <AssignmentCard data={item} />}
+            ListFooterComponent={<AssignmentFooter assignment={assignment} />}
           />
+
+          {/* <FlatList
+            data={completedAssignment}
+            keyExtractor={(item) => item.id.toString()}
+            renderItem={({ item }) => <AssignmentCard data={item} />}
+          /> */}
         </View>
       </View>
     </SafeAreaView>
@@ -74,6 +85,28 @@ export const AssignmentHeader = () => {
         <Ionicons name="menu" color={"white"} size={18} />
         <Ionicons name="person" color={"white"} size={18} />
       </View>
+    </View>
+  );
+};
+
+export const AssignmentFooter = ({
+  assignment,
+}: {
+  assignment: Assignment[];
+}) => {
+  const completedAssignments = assignment.filter((item) => item.completed);
+
+  return (
+    <View>
+      <Text className="text-text text-lg">Recently Completed</Text>
+
+      {completedAssignments.length > 0 ? (
+        completedAssignments.map((item) => (
+          <AssignmentCard key={item.id} data={item} />
+        ))
+      ) : (
+        <Text className="text-text">Empty</Text>
+      )}
     </View>
   );
 };
