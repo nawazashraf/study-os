@@ -4,12 +4,8 @@ import {
   CreateAssignment,
 } from "@/types/assignment";
 import { db } from "./db";
-import { initDB } from "./init";
-
-initDB();
 
 export const createAssignment = (data: CreateAssignment) => {
-  initDB();
   const result = db.runSync(
     `
         INSERT INTO assignments (
@@ -44,7 +40,8 @@ export const createAssignment = (data: CreateAssignment) => {
 
 export const getAllAssignments = async (): Promise<Assignment[]> => {
   const assignments = await db.getAllAsync<AssignmentRow>(
-    `SELECT * FROM assignments`,
+    `SELECT * FROM assignments
+    ORDER BY completedAt DESC`,
   );
 
   console.log(assignments);
@@ -87,9 +84,12 @@ export const updateAssignmentCompletion = async (
   return await db.runAsync(
     `
     UPDATE assignments
-    SET completed = ?
-    WHERE id = ?
+    SET 
+      completed = ?,
+      completedAt = ?
+    WHERE
+      id = ?
     `,
-    [completed ? 1 : 0, id],
+    [completed ? 1 : 0, completed ? new Date().toISOString() : null, id],
   );
 };
