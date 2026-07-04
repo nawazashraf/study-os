@@ -42,8 +42,10 @@ export const createAssignment = (data: CreateAssignment) => {
   return result.lastInsertRowId;
 };
 
-export const getAllAssignments = (): Assignment[] => {
-  const assignments = db.getAllSync<AssignmentRow>(`SELECT * FROM assignments`);
+export const getAllAssignments = async (): Promise<Assignment[]> => {
+  const assignments = await db.getAllAsync<AssignmentRow>(
+    `SELECT * FROM assignments`,
+  );
 
   console.log(assignments);
 
@@ -78,4 +80,16 @@ export const deleteAssignment = (id: number) => {
   );
 };
 
-export const markAssignmentComplete = () => {};
+export const updateAssignmentCompletion = async (
+  completed: boolean,
+  id: number,
+) => {
+  return await db.runAsync(
+    `
+    UPDATE assignments
+    SET completed = ?
+    WHERE id = ?
+    `,
+    [completed ? 1 : 0, id],
+  );
+};

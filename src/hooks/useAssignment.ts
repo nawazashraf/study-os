@@ -5,8 +5,8 @@ import { useCallback, useEffect, useState } from "react";
 export const useAssignment = () => {
   const [assignment, setAssignment] = useState<Assignment[]>([]);
 
-  const fetchAssignment = useCallback(() => {
-    const data = getAllAssignments();
+  const fetchAssignment = useCallback(async () => {
+    const data = await getAllAssignments();
     setAssignment(data);
   }, []);
 
