@@ -44,7 +44,7 @@ export default function CreateActivity() {
     if (router.canGoBack && router.canGoBack()) {
       router.back();
     } else {
-      router.replace("/activity/index");
+      router.replace("/activity");
     }
   };
 

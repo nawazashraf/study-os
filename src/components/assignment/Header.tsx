@@ -2,7 +2,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import { Pressable, Text, View } from "react-native";
 
-export const Header = ({ handleDelete }: { handleDelete: () => void }) => {
+export const Header = ({ handleDelete }: { handleDelete?: () => void }) => {
   const router = useRouter();
   return (
     <View className="h-14 px-4 flex flex-row justify-between items-center  bg-[#101112] shadow-2xl shadow-zinc-800 drop-shadow-md">
@@ -23,7 +23,7 @@ export const Header = ({ handleDelete }: { handleDelete: () => void }) => {
       </View>
 
       <Pressable
-        onPress={handleDelete}
+        onPress={() => handleDelete?.()}
         className="rounded-full size-8 flex flex-row justify-center items-center"
       >
         <Ionicons name="trash" color={"red"} size={24} />
