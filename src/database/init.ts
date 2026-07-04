@@ -12,7 +12,7 @@ const dropTables = () => {
 
 const createNotesTable = () => {
   db.execSync(`
-    CREATE TABLE notes (
+    CREATE TABLE IF NOT EXISTS notes (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       title TEXT NOT NULL,
       description TEXT NOT NULL,
@@ -23,7 +23,7 @@ const createNotesTable = () => {
 
 const createAttendanceTable = () => {
   db.execSync(`
-    CREATE TABLE attendance (
+    CREATE TABLE IF NOT EXISTS attendance (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       date TEXT NOT NULL,
       routineId INTEGER NOT NULL,
@@ -36,7 +36,7 @@ const createAttendanceTable = () => {
 
 const createTopicProgressTable = () => {
   db.execSync(`
-    CREATE TABLE topic_progress (
+    CREATE TABLE IF NOT EXISTS topic_progress (
       topic_id TEXT PRIMARY KEY,
       completed INTEGER NOT NULL DEFAULT 0,
       completed_at INTEGER
@@ -46,7 +46,7 @@ const createTopicProgressTable = () => {
 
 const createActivitiesTable = () => {
   db.execSync(`
-    CREATE TABLE activities (
+    CREATE TABLE IF NOT EXISTS activities (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       category TEXT NOT NULL,
       title TEXT NOT NULL,
@@ -61,7 +61,7 @@ const createActivitiesTable = () => {
 
 const createAssignmentsTable = () => {
   db.execSync(`
-    CREATE TABLE assignments (
+    CREATE TABLE IF NOT EXISTS assignments (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       title TEXT NOT NULL,
       subjectId INTEGER,
