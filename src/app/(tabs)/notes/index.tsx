@@ -1,3 +1,4 @@
+import Header from "@/components/home/Header";
 import { NoteCard } from "@/components/notes/NoteCard";
 import { getNotes } from "@/database/noteService";
 import { NoteType } from "@/types/types";
@@ -37,6 +38,7 @@ const Note = () => {
 
   return (
     <SafeAreaView edges={["top"]} style={{ flex: 1 }}>
+      <Header />
       <View className="px-4 bg-background flex flex-1">
         {/* Header */}
         <View className="mt-2">
@@ -77,8 +79,20 @@ const Note = () => {
             data={filteredNotes}
             keyExtractor={(item) => item.id.toString()}
             ListEmptyComponent={() => (
-              <View className="flex-1 flex-row justify-center items-center">
-                <Text className="text-white">Empty Notes</Text>
+              <View className="items-center justify-center py-20">
+                <Ionicons
+                  name="document-text-outline"
+                  size={48}
+                  color="#71717a"
+                />
+
+                <Text className="text-white text-lg font-semibold mt-4">
+                  No notes yet
+                </Text>
+
+                <Text className="text-muted text-center mt-2">
+                  Create your first note to get started.
+                </Text>
               </View>
             )}
             renderItem={({ item }) => (
