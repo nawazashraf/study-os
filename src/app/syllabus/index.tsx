@@ -7,15 +7,7 @@ import { FlatList } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const Syllabus = () => {
-  const { completed, refresh, semester, subjects } = useProgress();
-  console.log(completed);
-  console.log(semester);
-  console.log(subjects);
-  console.log(refresh);
-
-  // const totalSubject = 8;
-  // const subjectCompleted = 3;
-  // const syllabusCoverage = Math.floor((subjectCompleted / totalSubject) * 100);
+  const { semester, subjects } = useProgress();
 
   return (
     <SafeAreaView
@@ -86,9 +78,9 @@ export const SyllabusHeader = ({
 
 export const SubjectCard = ({ item }: { item: SubjectWithProgress }) => {
   const progress =
-    item.progress.completedModules === 0
-      ? 1
-      : Math.max((item.progress.completedModules / item.totalModules) * 100, 4);
+    item.totalModules === 0
+      ? 0
+      : Math.max((item.completedModules / item.totalModules) * 100, 4);
   const handleSubjectPress = () => {
     router.push({
       pathname: "/syllabus/[subject]",
@@ -136,7 +128,7 @@ export const SubjectCard = ({ item }: { item: SubjectWithProgress }) => {
 
         <View className="rounded-full bg-success/10 px-3 py-1">
           <Text className="text-xs font-medium text-success">
-            Module {item.progress.completedModules} / {item.totalModules}
+            Module {item.completedModules} / {item.totalModules}
           </Text>
         </View>
         <View className="mt-2 rounded-full overflow-hidden h-1 w-full bg-surface">

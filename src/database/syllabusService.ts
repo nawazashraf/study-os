@@ -36,6 +36,16 @@ export const getCompletedTopics = async () => {
   return new Set(rows.map((r) => r.topic_id));
 };
 
+const getSubjectTotals = (subject: Subject) => {
+  const totalModules = subject.modules.length;
+  const totalTopics = subject.modules.reduce(
+    (count, module) => count + module.topics.length,
+    0,
+  );
+
+  return { totalModules, totalTopics };
+};
+
 export const getModuleProgress = (module: Module, completed: Set<string>) => {
   const total = module.topics.length;
 
@@ -44,7 +54,7 @@ export const getModuleProgress = (module: Module, completed: Set<string>) => {
   return {
     done,
     total,
-    percentage: Math.floor((done / total) * 100),
+    percentage: total === 0 ? 0 : Math.floor((done / total) * 100),
     status:
       done === 0 ? "not_started" : done === total ? "completed" : "in_progress",
   };
@@ -56,6 +66,8 @@ export const getSubjectProgress = (
 ) => {
   let completedModules = 0;
   let completedTopics = 0;
+
+  const subjectTotals = getSubjectTotals(subject);
 
   const modules = subject.modules.map((module) => {
     const progress = getModuleProgress(module, completed);
@@ -73,16 +85,18 @@ export const getSubjectProgress = (
   return {
     ...subject,
     modules,
-
+    totalModules: subjectTotals.totalModules,
+    totalTopics: subjectTotals.totalTopics,
     completedModules,
     completedTopics,
-
-    percentage: Math.floor((completedTopics / subject.totalTopics) * 100),
-
+    percentage:
+      subjectTotals.totalTopics === 0
+        ? 0
+        : Math.floor((completedTopics / subjectTotals.totalTopics) * 100),
     status:
       completedTopics === 0
         ? "not_started"
-        : completedTopics === subject.totalTopics
+        : completedTopics === subjectTotals.totalTopics
           ? "completed"
           : "in_progress",
   };
@@ -112,6 +126,7 @@ export const getSemesterProgress = (
     totalSubjects: subjects.length,
     completedTopics,
     totalTopics,
-    percentage: Math.floor((completedTopics / totalTopics) * 100),
+    percentage:
+      totalTopics === 0 ? 0 : Math.floor((completedTopics / totalTopics) * 100),
   };
 };

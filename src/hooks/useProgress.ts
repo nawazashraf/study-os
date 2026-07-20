@@ -20,10 +20,9 @@ export function useProgress() {
 
   const semester = getSemesterProgress(syllabus.subjects, completed);
 
-  const subjects = syllabus.subjects.map((subject) => ({
-    ...subject,
-    progress: getSubjectProgress(subject, completed),
-  }));
+  const subjects = syllabus.subjects.map((subject) =>
+    getSubjectProgress(subject, completed),
+  );
 
   return {
     semester,

@@ -1,4 +1,4 @@
-import { getSubjectProgress } from "@/database/syllabusService";
+export type ProgressStatus = "not_started" | "in_progress" | "completed";
 
 export interface SemesterData {
   version: number;
@@ -24,8 +24,6 @@ export interface Subject {
   prerequisites: string[];
   objectives: string;
   outcomes: Outcome[];
-  totalModules: number;
-  totalTopics: number;
   modules: Module[];
   books: string[];
   references: string[];
@@ -87,12 +85,27 @@ export interface Pyq {
   question?: string;
 }
 
+export type ProgressStatus = "not_started" | "in_progress" | "completed";
+
+export interface ModuleProgress {
+  done: number;
+  total: number;
+  percentage: number;
+  status: ProgressStatus;
+}
+
+export interface SubjectWithProgress extends Subject {
+  modules: (Module & { progress: ModuleProgress })[];
+  totalModules: number;
+  totalTopics: number;
+  completedModules: number;
+  completedTopics: number;
+  percentage: number;
+  status: ProgressStatus;
+}
+
 export type SyllabusHeaderProps = {
   syllabusCoverage: number;
   subjectCompleted: number;
   totalSubject: number;
-};
-
-export type SubjectWithProgress = Subject & {
-  progress: ReturnType<typeof getSubjectProgress>;
 };

@@ -14,7 +14,12 @@
       "category": "Major",
       "credits": 3,
       "studyHours": 36,
-      "weeklyHours": { "L": 3, "T": 0, "P": 0, "total": 3 },
+      "weeklyHours": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "total": 3
+      },
       "icon": "database-outline",
       "color": "#4F8EF7",
       "prerequisites": [
@@ -49,8 +54,6 @@
           "description": "Design entity-relationship diagrams to represent simple database application scenarios, translate entity-relationship diagrams into relational tables, populate a relational database and formulate SQL queries on the data."
         }
       ],
-      "totalModules": 6,
-      "totalTopics": 47,
       "modules": [
         {
           "id": "module-1",
@@ -59,12 +62,30 @@
           "hours": 2,
           "title": "Introduction",
           "topics": [
-            { "id": "dbms-m1-t1", "title": "Concept & Overview of DBMS" },
-            { "id": "dbms-m1-t2", "title": "Data Models" },
-            { "id": "dbms-m1-t3", "title": "Database Languages" },
-            { "id": "dbms-m1-t4", "title": "Database Administrator" },
-            { "id": "dbms-m1-t5", "title": "Database Users" },
-            { "id": "dbms-m1-t6", "title": "Three Schema Architecture of DBMS" }
+            {
+              "id": "dbms-m1-t1",
+              "title": "Concept & Overview of DBMS"
+            },
+            {
+              "id": "dbms-m1-t2",
+              "title": "Data Models"
+            },
+            {
+              "id": "dbms-m1-t3",
+              "title": "Database Languages"
+            },
+            {
+              "id": "dbms-m1-t4",
+              "title": "Database Administrator"
+            },
+            {
+              "id": "dbms-m1-t5",
+              "title": "Database Users"
+            },
+            {
+              "id": "dbms-m1-t6",
+              "title": "Three Schema Architecture of DBMS"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -78,26 +99,62 @@
           "hours": 9,
           "title": "Entity-Relationship and Relational Database Model",
           "topics": [
-            { "id": "dbms-m2-t1", "title": "Basic Concepts" },
-            { "id": "dbms-m2-t2", "title": "Design Issues" },
-            { "id": "dbms-m2-t3", "title": "Mapping Constraints" },
-            { "id": "dbms-m2-t4", "title": "Keys" },
-            { "id": "dbms-m2-t5", "title": "Entity-Relationship Diagram" },
-            { "id": "dbms-m2-t6", "title": "Weak Entity Sets" },
-            { "id": "dbms-m2-t7", "title": "Extended E-R Features" },
-            { "id": "dbms-m2-t8", "title": "Case Study on E-R Model" },
+            {
+              "id": "dbms-m2-t1",
+              "title": "Basic Concepts"
+            },
+            {
+              "id": "dbms-m2-t2",
+              "title": "Design Issues"
+            },
+            {
+              "id": "dbms-m2-t3",
+              "title": "Mapping Constraints"
+            },
+            {
+              "id": "dbms-m2-t4",
+              "title": "Keys"
+            },
+            {
+              "id": "dbms-m2-t5",
+              "title": "Entity-Relationship Diagram"
+            },
+            {
+              "id": "dbms-m2-t6",
+              "title": "Weak Entity Sets"
+            },
+            {
+              "id": "dbms-m2-t7",
+              "title": "Extended E-R Features"
+            },
+            {
+              "id": "dbms-m2-t8",
+              "title": "Case Study on E-R Model"
+            },
             {
               "id": "dbms-m2-t9",
               "title": "Structure of Relational Databases"
             },
-            { "id": "dbms-m2-t10", "title": "Relational Algebra" },
-            { "id": "dbms-m2-t11", "title": "Relational Calculus" },
+            {
+              "id": "dbms-m2-t10",
+              "title": "Relational Algebra"
+            },
+            {
+              "id": "dbms-m2-t11",
+              "title": "Relational Calculus"
+            },
             {
               "id": "dbms-m2-t12",
               "title": "Extended Relational Algebra Operations"
             },
-            { "id": "dbms-m2-t13", "title": "Views" },
-            { "id": "dbms-m2-t14", "title": "Modifications of the Database" }
+            {
+              "id": "dbms-m2-t13",
+              "title": "Views"
+            },
+            {
+              "id": "dbms-m2-t14",
+              "title": "Modifications of the Database"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -111,24 +168,54 @@
           "hours": 6,
           "title": "SQL and Integrity Constraints",
           "topics": [
-            { "id": "dbms-m3-t1", "title": "Concept of DDL, DML, DCL" },
-            { "id": "dbms-m3-t2", "title": "Basic Structure" },
-            { "id": "dbms-m3-t3", "title": "Set Operations" },
-            { "id": "dbms-m3-t4", "title": "Aggregate Functions" },
-            { "id": "dbms-m3-t5", "title": "Null Values" },
-            { "id": "dbms-m3-t6", "title": "Domain Constraints" },
+            {
+              "id": "dbms-m3-t1",
+              "title": "Concept of DDL, DML, DCL"
+            },
+            {
+              "id": "dbms-m3-t2",
+              "title": "Basic Structure"
+            },
+            {
+              "id": "dbms-m3-t3",
+              "title": "Set Operations"
+            },
+            {
+              "id": "dbms-m3-t4",
+              "title": "Aggregate Functions"
+            },
+            {
+              "id": "dbms-m3-t5",
+              "title": "Null Values"
+            },
+            {
+              "id": "dbms-m3-t6",
+              "title": "Domain Constraints"
+            },
             {
               "id": "dbms-m3-t7",
               "title": "Referential Integrity Constraints"
             },
-            { "id": "dbms-m3-t8", "title": "Assertions" },
-            { "id": "dbms-m3-t9", "title": "Views" },
-            { "id": "dbms-m3-t10", "title": "Nested Subqueries" },
+            {
+              "id": "dbms-m3-t8",
+              "title": "Assertions"
+            },
+            {
+              "id": "dbms-m3-t9",
+              "title": "Views"
+            },
+            {
+              "id": "dbms-m3-t10",
+              "title": "Nested Subqueries"
+            },
             {
               "id": "dbms-m3-t11",
               "title": "Database Security Application Development using SQL"
             },
-            { "id": "dbms-m3-t12", "title": "Stored Procedures and Triggers" }
+            {
+              "id": "dbms-m3-t12",
+              "title": "Stored Procedures and Triggers"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -142,7 +229,10 @@
           "hours": 8,
           "title": "Relational Database Design",
           "topics": [
-            { "id": "dbms-m4-t1", "title": "Functional Dependency" },
+            {
+              "id": "dbms-m4-t1",
+              "title": "Functional Dependency"
+            },
             {
               "id": "dbms-m4-t2",
               "title": "Different Anomalies in Designing a Database"
@@ -151,16 +241,34 @@
               "id": "dbms-m4-t3",
               "title": "Normalization Using Functional Dependencies"
             },
-            { "id": "dbms-m4-t4", "title": "Decomposition" },
-            { "id": "dbms-m4-t5", "title": "Boyce-Codd Normal Form (BCNF)" },
-            { "id": "dbms-m4-t6", "title": "3NF" },
+            {
+              "id": "dbms-m4-t4",
+              "title": "Decomposition"
+            },
+            {
+              "id": "dbms-m4-t5",
+              "title": "Boyce-Codd Normal Form (BCNF)"
+            },
+            {
+              "id": "dbms-m4-t6",
+              "title": "3NF"
+            },
             {
               "id": "dbms-m4-t7",
               "title": "Normalization Using Multi-Valued Dependencies"
             },
-            { "id": "dbms-m4-t8", "title": "4NF" },
-            { "id": "dbms-m4-t9", "title": "5NF" },
-            { "id": "dbms-m4-t10", "title": "Case Study" }
+            {
+              "id": "dbms-m4-t8",
+              "title": "4NF"
+            },
+            {
+              "id": "dbms-m4-t9",
+              "title": "5NF"
+            },
+            {
+              "id": "dbms-m4-t10",
+              "title": "Case Study"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -174,7 +282,10 @@
           "hours": 7,
           "title": "Internals of RDBMS",
           "topics": [
-            { "id": "dbms-m5-t1", "title": "Physical Data Structures" },
+            {
+              "id": "dbms-m5-t1",
+              "title": "Physical Data Structures"
+            },
             {
               "id": "dbms-m5-t2",
               "title": "Query Optimization: Join Algorithm"
@@ -183,12 +294,30 @@
               "id": "dbms-m5-t3",
               "title": "Statistics and Cost Based Optimization"
             },
-            { "id": "dbms-m5-t4", "title": "Transaction Processing" },
-            { "id": "dbms-m5-t5", "title": "Transaction Model Properties" },
-            { "id": "dbms-m5-t6", "title": "State Serializability" },
-            { "id": "dbms-m5-t7", "title": "Lock Base Protocols" },
-            { "id": "dbms-m5-t8", "title": "Two Phase Locking" },
-            { "id": "dbms-m5-t9", "title": "Dead Lock Handling" }
+            {
+              "id": "dbms-m5-t4",
+              "title": "Transaction Processing"
+            },
+            {
+              "id": "dbms-m5-t5",
+              "title": "Transaction Model Properties"
+            },
+            {
+              "id": "dbms-m5-t6",
+              "title": "State Serializability"
+            },
+            {
+              "id": "dbms-m5-t7",
+              "title": "Lock Base Protocols"
+            },
+            {
+              "id": "dbms-m5-t8",
+              "title": "Two Phase Locking"
+            },
+            {
+              "id": "dbms-m5-t9",
+              "title": "Dead Lock Handling"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -202,14 +331,26 @@
           "hours": 6,
           "title": "File Organization & Index Structures",
           "topics": [
-            { "id": "dbms-m6-t1", "title": "File & Record Concept" },
-            { "id": "dbms-m6-t2", "title": "Placing File Records on Disk" },
-            { "id": "dbms-m6-t3", "title": "Fixed and Variable Sized Records" },
+            {
+              "id": "dbms-m6-t1",
+              "title": "File & Record Concept"
+            },
+            {
+              "id": "dbms-m6-t2",
+              "title": "Placing File Records on Disk"
+            },
+            {
+              "id": "dbms-m6-t3",
+              "title": "Fixed and Variable Sized Records"
+            },
             {
               "id": "dbms-m6-t4",
               "title": "Types of Single-Level Index: Primary, Secondary, Clustering"
             },
-            { "id": "dbms-m6-t5", "title": "Multilevel Indexes" }
+            {
+              "id": "dbms-m6-t5",
+              "title": "Multilevel Indexes"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -234,7 +375,12 @@
       "category": "Major",
       "credits": 3,
       "studyHours": 36,
-      "weeklyHours": { "L": 3, "T": 0, "P": 0, "total": 3 },
+      "weeklyHours": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "total": 3
+      },
       "icon": "server-outline",
       "color": "#F76F4F",
       "prerequisites": [
@@ -269,8 +415,6 @@
           "description": "Design network architecture and implement in practical field of work."
         }
       ],
-      "totalModules": 6,
-      "totalTopics": 40,
       "modules": [
         {
           "id": "module-1",
@@ -283,7 +427,10 @@
               "id": "cn-m1-t1",
               "title": "Introduction to Data Communication and Networking"
             },
-            { "id": "cn-m1-t2", "title": "Data Communications Components" },
+            {
+              "id": "cn-m1-t2",
+              "title": "Data Communications Components"
+            },
             {
               "id": "cn-m1-t3",
               "title": "Data Representation (ASCII, ISO etc.)"
@@ -292,7 +439,10 @@
               "id": "cn-m1-t4",
               "title": "Direction of Data Flow: Simplex, Half Duplex, Full Duplex"
             },
-            { "id": "cn-m1-t5", "title": "Network Criteria" },
+            {
+              "id": "cn-m1-t5",
+              "title": "Network Criteria"
+            },
             {
               "id": "cn-m1-t6",
               "title": "Physical Structure: Type of Connection, Topology"
@@ -305,7 +455,10 @@
               "id": "cn-m1-t8",
               "title": "Internet: Brief History, Protocols and Standards"
             },
-            { "id": "cn-m1-t9", "title": "Reference Models: OSI and TCP/IP" }
+            {
+              "id": "cn-m1-t9",
+              "title": "Reference Models: OSI and TCP/IP"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -327,7 +480,10 @@
               "id": "cn-m2-t2",
               "title": "Circuit Switching: Time Division & Space Division Switch, TDM Bus"
             },
-            { "id": "cn-m2-t3", "title": "Telephone Network" }
+            {
+              "id": "cn-m2-t3",
+              "title": "Telephone Network"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -341,25 +497,58 @@
           "hours": 8,
           "title": "Data Link Layer",
           "topics": [
-            { "id": "cn-m3-t1", "title": "Types of Errors" },
-            { "id": "cn-m3-t2", "title": "Framing" },
+            {
+              "id": "cn-m3-t1",
+              "title": "Types of Errors"
+            },
+            {
+              "id": "cn-m3-t2",
+              "title": "Framing"
+            },
             {
               "id": "cn-m3-t3",
               "title": "Error Detection & Correction Methods"
             },
-            { "id": "cn-m3-t4", "title": "Flow Control" },
-            { "id": "cn-m3-t5", "title": "Protocols: Stop & Wait ARQ" },
-            { "id": "cn-m3-t6", "title": "Go Back-N ARQ" },
-            { "id": "cn-m3-t7", "title": "Selective Repeat ARQ" },
-            { "id": "cn-m3-t8", "title": "HDLC" },
-            { "id": "cn-m3-t9", "title": "Point to Point Protocol" },
-            { "id": "cn-m3-t10", "title": "LCP, NCP, Token Ring" },
-            { "id": "cn-m3-t11", "title": "Reservation, Polling" },
+            {
+              "id": "cn-m3-t4",
+              "title": "Flow Control"
+            },
+            {
+              "id": "cn-m3-t5",
+              "title": "Protocols: Stop & Wait ARQ"
+            },
+            {
+              "id": "cn-m3-t6",
+              "title": "Go Back-N ARQ"
+            },
+            {
+              "id": "cn-m3-t7",
+              "title": "Selective Repeat ARQ"
+            },
+            {
+              "id": "cn-m3-t8",
+              "title": "HDLC"
+            },
+            {
+              "id": "cn-m3-t9",
+              "title": "Point to Point Protocol"
+            },
+            {
+              "id": "cn-m3-t10",
+              "title": "LCP, NCP, Token Ring"
+            },
+            {
+              "id": "cn-m3-t11",
+              "title": "Reservation, Polling"
+            },
             {
               "id": "cn-m3-t12",
               "title": "Multiple Access Protocols: Pure ALOHA, Slotted ALOHA"
             },
-            { "id": "cn-m3-t13", "title": "CSMA, CSMA/CD, CSMA/CA" },
+            {
+              "id": "cn-m3-t13",
+              "title": "CSMA, CSMA/CD, CSMA/CA"
+            },
             {
               "id": "cn-m3-t14",
               "title": "Traditional Ethernet, Fast Ethernet"
@@ -389,7 +578,10 @@
               "id": "cn-m4-t3",
               "title": "Routing: Techniques, Routing Protocols"
             },
-            { "id": "cn-m4-t4", "title": "ARP, IP, ICMP, IPV6" }
+            {
+              "id": "cn-m4-t4",
+              "title": "ARP, IP, ICMP, IPV6"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -403,9 +595,18 @@
           "hours": 6,
           "title": "Transport Layer",
           "topics": [
-            { "id": "cn-m5-t1", "title": "Process to Process Delivery" },
-            { "id": "cn-m5-t2", "title": "UDP" },
-            { "id": "cn-m5-t3", "title": "TCP" },
+            {
+              "id": "cn-m5-t1",
+              "title": "Process to Process Delivery"
+            },
+            {
+              "id": "cn-m5-t2",
+              "title": "UDP"
+            },
+            {
+              "id": "cn-m5-t3",
+              "title": "TCP"
+            },
             {
               "id": "cn-m5-t4",
               "title": "Congestion Control: Open Loop, Closed Loop Choke Packets"
@@ -414,8 +615,14 @@
               "id": "cn-m5-t5",
               "title": "Quality of Service: Techniques to Improve QoS"
             },
-            { "id": "cn-m5-t6", "title": "Leaky Bucket Algorithm" },
-            { "id": "cn-m5-t7", "title": "Token Bucket Algorithm" }
+            {
+              "id": "cn-m5-t6",
+              "title": "Leaky Bucket Algorithm"
+            },
+            {
+              "id": "cn-m5-t7",
+              "title": "Token Bucket Algorithm"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -429,13 +636,34 @@
           "hours": 6,
           "title": "Application Layer",
           "topics": [
-            { "id": "cn-m6-t1", "title": "DNS" },
-            { "id": "cn-m6-t2", "title": "SMTP" },
-            { "id": "cn-m6-t3", "title": "SNMP" },
-            { "id": "cn-m6-t4", "title": "FTP" },
-            { "id": "cn-m6-t5", "title": "HTTPS" },
-            { "id": "cn-m6-t6", "title": "Firewalls" },
-            { "id": "cn-m6-t7", "title": "IP Filtering" }
+            {
+              "id": "cn-m6-t1",
+              "title": "DNS"
+            },
+            {
+              "id": "cn-m6-t2",
+              "title": "SMTP"
+            },
+            {
+              "id": "cn-m6-t3",
+              "title": "SNMP"
+            },
+            {
+              "id": "cn-m6-t4",
+              "title": "FTP"
+            },
+            {
+              "id": "cn-m6-t5",
+              "title": "HTTPS"
+            },
+            {
+              "id": "cn-m6-t6",
+              "title": "Firewalls"
+            },
+            {
+              "id": "cn-m6-t7",
+              "title": "IP Filtering"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -461,7 +689,12 @@
       "category": "Major",
       "credits": 3,
       "studyHours": 36,
-      "weeklyHours": { "L": 3, "T": 0, "P": 0, "total": 3 },
+      "weeklyHours": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "total": 3
+      },
       "icon": "code-braces",
       "color": "#A14FF7",
       "prerequisites": [
@@ -497,8 +730,6 @@
           "description": "Design efficient algorithms for common engineering problems."
         }
       ],
-      "totalModules": 7,
-      "totalTopics": 38,
       "modules": [
         {
           "id": "module-1",
@@ -507,7 +738,10 @@
           "hours": 2,
           "title": "Introduction",
           "topics": [
-            { "id": "daa-m1-t1", "title": "Time and Space Complexity" },
+            {
+              "id": "daa-m1-t1",
+              "title": "Time and Space Complexity"
+            },
             {
               "id": "daa-m1-t2",
               "title": "Different Asymptotic Notations and Their Mathematical Significance"
@@ -525,14 +759,38 @@
           "hours": 8,
           "title": "Divide and Conquer & Dynamic Programming",
           "topics": [
-            { "id": "daa-m2-t1", "title": "Divide and Conquer: Basic Method" },
-            { "id": "daa-m2-t2", "title": "Merge Sort and Its Complexity" },
-            { "id": "daa-m2-t3", "title": "Quick Sort and Its Complexity" },
-            { "id": "daa-m2-t4", "title": "Heap Sort and Its Complexity" },
-            { "id": "daa-m2-t5", "title": "Dynamic Programming: Basic Method" },
-            { "id": "daa-m2-t6", "title": "Matrix Chain Multiplication" },
-            { "id": "daa-m2-t7", "title": "All Pair Shortest Paths" },
-            { "id": "daa-m2-t8", "title": "Single Source Shortest Path" },
+            {
+              "id": "daa-m2-t1",
+              "title": "Divide and Conquer: Basic Method"
+            },
+            {
+              "id": "daa-m2-t2",
+              "title": "Merge Sort and Its Complexity"
+            },
+            {
+              "id": "daa-m2-t3",
+              "title": "Quick Sort and Its Complexity"
+            },
+            {
+              "id": "daa-m2-t4",
+              "title": "Heap Sort and Its Complexity"
+            },
+            {
+              "id": "daa-m2-t5",
+              "title": "Dynamic Programming: Basic Method"
+            },
+            {
+              "id": "daa-m2-t6",
+              "title": "Matrix Chain Multiplication"
+            },
+            {
+              "id": "daa-m2-t7",
+              "title": "All Pair Shortest Paths"
+            },
+            {
+              "id": "daa-m2-t8",
+              "title": "Single Source Shortest Path"
+            },
             {
               "id": "daa-m2-t9",
               "title": "Strassen's Matrix Multiplication Algorithm"
@@ -550,13 +808,34 @@
           "hours": 8,
           "title": "Backtracking & Greedy Method",
           "topics": [
-            { "id": "daa-m3-t1", "title": "Backtracking: Basic Method" },
-            { "id": "daa-m3-t2", "title": "8 Queens Problem" },
-            { "id": "daa-m3-t3", "title": "Graph Coloring Problem" },
-            { "id": "daa-m3-t4", "title": "Greedy Method: Basic Method" },
-            { "id": "daa-m3-t5", "title": "Knapsack Problem" },
-            { "id": "daa-m3-t6", "title": "Traveling Salesman Problem" },
-            { "id": "daa-m3-t7", "title": "Job Sequencing with Deadlines" },
+            {
+              "id": "daa-m3-t1",
+              "title": "Backtracking: Basic Method"
+            },
+            {
+              "id": "daa-m3-t2",
+              "title": "8 Queens Problem"
+            },
+            {
+              "id": "daa-m3-t3",
+              "title": "Graph Coloring Problem"
+            },
+            {
+              "id": "daa-m3-t4",
+              "title": "Greedy Method: Basic Method"
+            },
+            {
+              "id": "daa-m3-t5",
+              "title": "Knapsack Problem"
+            },
+            {
+              "id": "daa-m3-t6",
+              "title": "Traveling Salesman Problem"
+            },
+            {
+              "id": "daa-m3-t7",
+              "title": "Job Sequencing with Deadlines"
+            },
             {
               "id": "daa-m3-t8",
               "title": "Minimum Cost Spanning Tree by Prim's Algorithm"
@@ -582,7 +861,10 @@
               "id": "daa-m4-t1",
               "title": "Branch and Bound Technique: Integer Programming"
             },
-            { "id": "daa-m4-t2", "title": "0/1 Knapsack Problem" }
+            {
+              "id": "daa-m4-t2",
+              "title": "0/1 Knapsack Problem"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -600,8 +882,14 @@
               "id": "daa-m5-t1",
               "title": "Disjoint Set Manipulation: Set Manipulation Algorithm UNION-FIND"
             },
-            { "id": "daa-m5-t2", "title": "Union by Rank" },
-            { "id": "daa-m5-t3", "title": "String Matching: Naive Algorithm" },
+            {
+              "id": "daa-m5-t2",
+              "title": "Union by Rank"
+            },
+            {
+              "id": "daa-m5-t3",
+              "title": "String Matching: Naive Algorithm"
+            },
             {
               "id": "daa-m5-t4",
               "title": "Knuth, Morris, Pratt (KMP) Algorithm with Their Complexities"
@@ -623,8 +911,14 @@
               "id": "daa-m6-t1",
               "title": "Amortized Analysis: Aggregate Method"
             },
-            { "id": "daa-m6-t2", "title": "Accounting Method" },
-            { "id": "daa-m6-t3", "title": "Potential Method" },
+            {
+              "id": "daa-m6-t2",
+              "title": "Accounting Method"
+            },
+            {
+              "id": "daa-m6-t3",
+              "title": "Potential Method"
+            },
             {
               "id": "daa-m6-t4",
               "title": "Network Flow: Ford Fulkerson Algorithm"
@@ -650,19 +944,34 @@
               "id": "daa-m7-t1",
               "title": "Notion of NP-Completeness: P Class"
             },
-            { "id": "daa-m7-t2", "title": "NP Class" },
-            { "id": "daa-m7-t3", "title": "NP Hard Class" },
+            {
+              "id": "daa-m7-t2",
+              "title": "NP Class"
+            },
+            {
+              "id": "daa-m7-t3",
+              "title": "NP Hard Class"
+            },
             {
               "id": "daa-m7-t4",
               "title": "NP Complete Class and Their Interrelationship"
             },
-            { "id": "daa-m7-t5", "title": "Satisfiability Problem" },
-            { "id": "daa-m7-t6", "title": "Cook's Theorem (Statement Only)" },
+            {
+              "id": "daa-m7-t5",
+              "title": "Satisfiability Problem"
+            },
+            {
+              "id": "daa-m7-t6",
+              "title": "Cook's Theorem (Statement Only)"
+            },
             {
               "id": "daa-m7-t7",
               "title": "Approximation Algorithms: Necessity of Approximation Scheme"
             },
-            { "id": "daa-m7-t8", "title": "Performance Guarantee" },
+            {
+              "id": "daa-m7-t8",
+              "title": "Performance Guarantee"
+            },
             {
               "id": "daa-m7-t9",
               "title": "Polynomial Time Approximation Schemes"
@@ -692,7 +1001,12 @@
       "category": "Major",
       "credits": 3,
       "studyHours": 36,
-      "weeklyHours": { "L": 3, "T": 0, "P": 0, "total": 3 },
+      "weeklyHours": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "total": 3
+      },
       "icon": "robot-outline",
       "color": "#F7C94F",
       "prerequisites": [
@@ -728,8 +1042,6 @@
           "description": "Demonstrate and enrich knowledge to select and apply AI tools to synthesize information and develop models within constraints of application area."
         }
       ],
-      "totalModules": 8,
-      "totalTopics": 55,
       "modules": [
         {
           "id": "module-1",
@@ -738,16 +1050,34 @@
           "hours": 3,
           "title": "Introduction to Artificial Intelligence",
           "topics": [
-            { "id": "ai-m1-t1", "title": "Basic Concepts" },
-            { "id": "ai-m1-t2", "title": "History of Artificial Intelligence" },
+            {
+              "id": "ai-m1-t1",
+              "title": "Basic Concepts"
+            },
+            {
+              "id": "ai-m1-t2",
+              "title": "History of Artificial Intelligence"
+            },
             {
               "id": "ai-m1-t3",
               "title": "Architecture of an Artificial Intelligent Agent"
             },
-            { "id": "ai-m1-t4", "title": "Structure of Agents" },
-            { "id": "ai-m1-t5", "title": "Goal Based Agents" },
-            { "id": "ai-m1-t6", "title": "Utility Based Agents" },
-            { "id": "ai-m1-t7", "title": "Learning Agents" },
+            {
+              "id": "ai-m1-t4",
+              "title": "Structure of Agents"
+            },
+            {
+              "id": "ai-m1-t5",
+              "title": "Goal Based Agents"
+            },
+            {
+              "id": "ai-m1-t6",
+              "title": "Utility Based Agents"
+            },
+            {
+              "id": "ai-m1-t7",
+              "title": "Learning Agents"
+            },
             {
               "id": "ai-m1-t8",
               "title": "Applications of Artificial Intelligence"
@@ -765,7 +1095,10 @@
           "hours": 5,
           "title": "AI Problem Formulation as State-Space Exploration for Goal Searching",
           "topics": [
-            { "id": "ai-m2-t1", "title": "Basic Concepts" },
+            {
+              "id": "ai-m2-t1",
+              "title": "Basic Concepts"
+            },
             {
               "id": "ai-m2-t2",
               "title": "State-Space Exploration Formulation for Water Jug Problem"
@@ -774,8 +1107,14 @@
               "id": "ai-m2-t3",
               "title": "Missionaries and Cannibals Problems"
             },
-            { "id": "ai-m2-t4", "title": "8-Puzzle Problem" },
-            { "id": "ai-m2-t5", "title": "Constraint Satisfaction Problem" },
+            {
+              "id": "ai-m2-t4",
+              "title": "8-Puzzle Problem"
+            },
+            {
+              "id": "ai-m2-t5",
+              "title": "Constraint Satisfaction Problem"
+            },
             {
               "id": "ai-m2-t6",
               "title": "Production System for Goal Searching"
@@ -784,11 +1123,26 @@
               "id": "ai-m2-t7",
               "title": "Blind Search: Breadth First Search (BFS)"
             },
-            { "id": "ai-m2-t8", "title": "Depth First Search (DFS)" },
-            { "id": "ai-m2-t9", "title": "Depth Limited Search" },
-            { "id": "ai-m2-t10", "title": "Iterative Deepening Search" },
-            { "id": "ai-m2-t11", "title": "Uniform Cost Search" },
-            { "id": "ai-m2-t12", "title": "Bidirectional Search" }
+            {
+              "id": "ai-m2-t8",
+              "title": "Depth First Search (DFS)"
+            },
+            {
+              "id": "ai-m2-t9",
+              "title": "Depth Limited Search"
+            },
+            {
+              "id": "ai-m2-t10",
+              "title": "Iterative Deepening Search"
+            },
+            {
+              "id": "ai-m2-t11",
+              "title": "Uniform Cost Search"
+            },
+            {
+              "id": "ai-m2-t12",
+              "title": "Bidirectional Search"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -806,15 +1160,30 @@
               "id": "ai-m3-t1",
               "title": "Basic Concepts of Heuristic Techniques"
             },
-            { "id": "ai-m3-t2", "title": "Properties of Heuristic Functions" },
-            { "id": "ai-m3-t3", "title": "Hill Climbing Search" },
-            { "id": "ai-m3-t4", "title": "Best First Search" },
-            { "id": "ai-m3-t5", "title": "A* Search" },
+            {
+              "id": "ai-m3-t2",
+              "title": "Properties of Heuristic Functions"
+            },
+            {
+              "id": "ai-m3-t3",
+              "title": "Hill Climbing Search"
+            },
+            {
+              "id": "ai-m3-t4",
+              "title": "Best First Search"
+            },
+            {
+              "id": "ai-m3-t5",
+              "title": "A* Search"
+            },
             {
               "id": "ai-m3-t6",
               "title": "Memory-Bounded Heuristic Search: Iterative-Deepening A* Search"
             },
-            { "id": "ai-m3-t7", "title": "Recursive Best First Search" },
+            {
+              "id": "ai-m3-t7",
+              "title": "Recursive Best First Search"
+            },
             {
               "id": "ai-m3-t8",
               "title": "Simplified Memory Bounded A* Search"
@@ -827,7 +1196,10 @@
               "id": "ai-m3-t10",
               "title": "Genetic Algorithm Based Evolutionary Search"
             },
-            { "id": "ai-m3-t11", "title": "Ant Colony Optimization" }
+            {
+              "id": "ai-m3-t11",
+              "title": "Ant Colony Optimization"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -841,9 +1213,18 @@
           "hours": 2,
           "title": "Adversarial Search for Game Playing",
           "topics": [
-            { "id": "ai-m4-t1", "title": "Basic Concepts" },
-            { "id": "ai-m4-t2", "title": "Minimax Search" },
-            { "id": "ai-m4-t3", "title": "Alpha-Beta Pruning" }
+            {
+              "id": "ai-m4-t1",
+              "title": "Basic Concepts"
+            },
+            {
+              "id": "ai-m4-t2",
+              "title": "Minimax Search"
+            },
+            {
+              "id": "ai-m4-t3",
+              "title": "Alpha-Beta Pruning"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -882,17 +1263,26 @@
           "hours": 4,
           "title": "Knowledge Representation",
           "topics": [
-            { "id": "ai-m6-t1", "title": "Semantic Nets and Frames" },
+            {
+              "id": "ai-m6-t1",
+              "title": "Semantic Nets and Frames"
+            },
             {
               "id": "ai-m6-t2",
               "title": "Strong Slot-and-Filler Structure for Knowledge Representation"
             },
-            { "id": "ai-m6-t3", "title": "Conceptual Dependency and Script" },
+            {
+              "id": "ai-m6-t3",
+              "title": "Conceptual Dependency and Script"
+            },
             {
               "id": "ai-m6-t4",
               "title": "Expert System: Introduction to Expert System"
             },
-            { "id": "ai-m6-t5", "title": "Phases of Expert System" },
+            {
+              "id": "ai-m6-t5",
+              "title": "Phases of Expert System"
+            },
             {
               "id": "ai-m6-t6",
               "title": "Characteristics of Expert System and a Case Study"
@@ -918,12 +1308,18 @@
               "id": "ai-m7-t1",
               "title": "Bayesian Inferencing and Bayesian Belief Network"
             },
-            { "id": "ai-m7-t2", "title": "Dempster-Shafer Theory" },
+            {
+              "id": "ai-m7-t2",
+              "title": "Dempster-Shafer Theory"
+            },
             {
               "id": "ai-m7-t3",
               "title": "Overview of Fuzzy Logic and Inferencing"
             },
-            { "id": "ai-m7-t4", "title": "Overview of Hidden Markov Model" },
+            {
+              "id": "ai-m7-t4",
+              "title": "Overview of Hidden Markov Model"
+            },
             {
               "id": "ai-m7-t5",
               "title": "Introduction to Natural Language Processing: Basic Concepts"
@@ -932,8 +1328,14 @@
               "id": "ai-m7-t6",
               "title": "Steps of Natural Language Processing"
             },
-            { "id": "ai-m7-t7", "title": "Morphological Analysis" },
-            { "id": "ai-m7-t8", "title": "Syntactic and Semantic Analysis" },
+            {
+              "id": "ai-m7-t7",
+              "title": "Morphological Analysis"
+            },
+            {
+              "id": "ai-m7-t8",
+              "title": "Syntactic and Semantic Analysis"
+            },
             {
               "id": "ai-m7-t9",
               "title": "Discourse Integration and Pragmatic Analysis"
@@ -959,9 +1361,18 @@
               "id": "ai-m8-t1",
               "title": "Basic Concepts of Machine Learning Model"
             },
-            { "id": "ai-m8-t2", "title": "Supervised Learning" },
-            { "id": "ai-m8-t3", "title": "Unsupervised Learning" },
-            { "id": "ai-m8-t4", "title": "Reinforced Learning" },
+            {
+              "id": "ai-m8-t2",
+              "title": "Supervised Learning"
+            },
+            {
+              "id": "ai-m8-t3",
+              "title": "Unsupervised Learning"
+            },
+            {
+              "id": "ai-m8-t4",
+              "title": "Reinforced Learning"
+            },
             {
               "id": "ai-m8-t5",
               "title": "Overview of Artificial Neural Network"
@@ -990,7 +1401,12 @@
       "category": "Minor",
       "credits": 2,
       "studyHours": 35,
-      "weeklyHours": { "L": 2, "T": 0, "P": 0, "total": 2 },
+      "weeklyHours": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "total": 2
+      },
       "icon": "store-outline",
       "color": "#4FC9F7",
       "prerequisites": [
@@ -1026,8 +1442,6 @@
           "description": "Apply different tools used in ERP."
         }
       ],
-      "totalModules": 6,
-      "totalTopics": 38,
       "modules": [
         {
           "id": "module-1",
@@ -1036,11 +1450,26 @@
           "hours": 5,
           "title": "Introduction to E-Commerce",
           "topics": [
-            { "id": "ec-m1-t1", "title": "Definition and Scope of E-Commerce" },
-            { "id": "ec-m1-t2", "title": "Hardware Requirements" },
-            { "id": "ec-m1-t3", "title": "E-Commerce and Trade Cycle" },
-            { "id": "ec-m1-t4", "title": "Electronic Mark Data Interchange" },
-            { "id": "ec-m1-t5", "title": "Internet Commerce" }
+            {
+              "id": "ec-m1-t1",
+              "title": "Definition and Scope of E-Commerce"
+            },
+            {
+              "id": "ec-m1-t2",
+              "title": "Hardware Requirements"
+            },
+            {
+              "id": "ec-m1-t3",
+              "title": "E-Commerce and Trade Cycle"
+            },
+            {
+              "id": "ec-m1-t4",
+              "title": "Electronic Mark Data Interchange"
+            },
+            {
+              "id": "ec-m1-t5",
+              "title": "Internet Commerce"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -1054,20 +1483,38 @@
           "hours": 6,
           "title": "Business to Business E-Commerce",
           "topics": [
-            { "id": "ec-m2-t1", "title": "Electronic Markets" },
+            {
+              "id": "ec-m2-t1",
+              "title": "Electronic Markets"
+            },
             {
               "id": "ec-m2-t2",
               "title": "Electronic Data Interchange (EDI): Technology"
             },
-            { "id": "ec-m2-t3", "title": "EDI Standards (UN/EDIFACT)" },
+            {
+              "id": "ec-m2-t3",
+              "title": "EDI Standards (UN/EDIFACT)"
+            },
             {
               "id": "ec-m2-t4",
               "title": "EDI Communications, Implementations, Agreements, Security"
             },
-            { "id": "ec-m2-t5", "title": "EDI and Business" },
-            { "id": "ec-m2-t6", "title": "Inter-Organizational E-commerce" },
-            { "id": "ec-m2-t7", "title": "Business Models for E-commerce" },
-            { "id": "ec-m2-t8", "title": "Business Process Re-Engineering" }
+            {
+              "id": "ec-m2-t5",
+              "title": "EDI and Business"
+            },
+            {
+              "id": "ec-m2-t6",
+              "title": "Inter-Organizational E-commerce"
+            },
+            {
+              "id": "ec-m2-t7",
+              "title": "Business Models for E-commerce"
+            },
+            {
+              "id": "ec-m2-t8",
+              "title": "Business Process Re-Engineering"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -1093,11 +1540,26 @@
               "id": "ec-m3-t3",
               "title": "Laws and Legal Issues for Internet Commerce"
             },
-            { "id": "ec-m3-t4", "title": "Trademarks and Domain Names" },
-            { "id": "ec-m3-t5", "title": "Copyright" },
-            { "id": "ec-m3-t6", "title": "Jurisdiction Issues" },
-            { "id": "ec-m3-t7", "title": "Service Provider Liability" },
-            { "id": "ec-m3-t8", "title": "Enforceable Online Contract" }
+            {
+              "id": "ec-m3-t4",
+              "title": "Trademarks and Domain Names"
+            },
+            {
+              "id": "ec-m3-t5",
+              "title": "Copyright"
+            },
+            {
+              "id": "ec-m3-t6",
+              "title": "Jurisdiction Issues"
+            },
+            {
+              "id": "ec-m3-t7",
+              "title": "Service Provider Liability"
+            },
+            {
+              "id": "ec-m3-t8",
+              "title": "Enforceable Online Contract"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -1115,21 +1577,42 @@
               "id": "ec-m4-t1",
               "title": "Symmetric and Asymmetric Cryptosystems"
             },
-            { "id": "ec-m4-t2", "title": "RSA and DES" },
-            { "id": "ec-m4-t3", "title": "Digital Signature" },
-            { "id": "ec-m4-t4", "title": "Protocols for Secure Messaging" },
+            {
+              "id": "ec-m4-t2",
+              "title": "RSA and DES"
+            },
+            {
+              "id": "ec-m4-t3",
+              "title": "Digital Signature"
+            },
+            {
+              "id": "ec-m4-t4",
+              "title": "Protocols for Secure Messaging"
+            },
             {
               "id": "ec-m4-t5",
               "title": "Secure Electronic Transaction (SET) Protocol"
             },
-            { "id": "ec-m4-t6", "title": "Electronic Cash Over Internet" },
-            { "id": "ec-m4-t7", "title": "Internet Security" },
+            {
+              "id": "ec-m4-t6",
+              "title": "Electronic Cash Over Internet"
+            },
+            {
+              "id": "ec-m4-t7",
+              "title": "Internet Security"
+            },
             {
               "id": "ec-m4-t8",
               "title": "Search Engines and Intelligent Agents in E-Commerce"
             },
-            { "id": "ec-m4-t9", "title": "Electronic Payment Systems" },
-            { "id": "ec-m4-t10", "title": "E-Security" }
+            {
+              "id": "ec-m4-t9",
+              "title": "Electronic Payment Systems"
+            },
+            {
+              "id": "ec-m4-t10",
+              "title": "E-Security"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -1143,10 +1626,22 @@
           "hours": 7,
           "title": "Business to Consumer E-Commerce and E-Business",
           "topics": [
-            { "id": "ec-m5-t1", "title": "Consumer Trade Transaction" },
-            { "id": "ec-m5-t2", "title": "Web Metrics" },
-            { "id": "ec-m5-t3", "title": "Elements of E-Commerce" },
-            { "id": "ec-m5-t4", "title": "Industry Impacts of E-Business" },
+            {
+              "id": "ec-m5-t1",
+              "title": "Consumer Trade Transaction"
+            },
+            {
+              "id": "ec-m5-t2",
+              "title": "Web Metrics"
+            },
+            {
+              "id": "ec-m5-t3",
+              "title": "Elements of E-Commerce"
+            },
+            {
+              "id": "ec-m5-t4",
+              "title": "Industry Impacts of E-Business"
+            },
             {
               "id": "ec-m5-t5",
               "title": "Integrating Intranet and Internet Web Applications Across Multiple Networks"
@@ -1159,8 +1654,14 @@
               "id": "ec-m5-t7",
               "title": "Internet Banking, Virtual Auctions, Online Share Dealing"
             },
-            { "id": "ec-m5-t8", "title": "Gambling on the Net, E-Diversity" },
-            { "id": "ec-m5-t9", "title": "Case Studies through Internet" }
+            {
+              "id": "ec-m5-t8",
+              "title": "Gambling on the Net, E-Diversity"
+            },
+            {
+              "id": "ec-m5-t9",
+              "title": "Case Studies through Internet"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -1174,13 +1675,34 @@
           "hours": 5,
           "title": "Mobile Commerce",
           "topics": [
-            { "id": "ec-m6-t1", "title": "Overview and Infrastructure" },
-            { "id": "ec-m6-t2", "title": "Applications of M-Commerce" },
-            { "id": "ec-m6-t3", "title": "Mobile Payment" },
-            { "id": "ec-m6-t4", "title": "Limitations" },
-            { "id": "ec-m6-t5", "title": "Security in M-Commerce" },
-            { "id": "ec-m6-t6", "title": "ERP and Data Warehousing" },
-            { "id": "ec-m6-t7", "title": "ERP and E-Business" }
+            {
+              "id": "ec-m6-t1",
+              "title": "Overview and Infrastructure"
+            },
+            {
+              "id": "ec-m6-t2",
+              "title": "Applications of M-Commerce"
+            },
+            {
+              "id": "ec-m6-t3",
+              "title": "Mobile Payment"
+            },
+            {
+              "id": "ec-m6-t4",
+              "title": "Limitations"
+            },
+            {
+              "id": "ec-m6-t5",
+              "title": "Security in M-Commerce"
+            },
+            {
+              "id": "ec-m6-t6",
+              "title": "ERP and Data Warehousing"
+            },
+            {
+              "id": "ec-m6-t7",
+              "title": "ERP and E-Business"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -1209,10 +1731,17 @@
       "category": "Minor",
       "credits": 2,
       "studyHours": 36,
-      "weeklyHours": { "L": 2, "T": 0, "P": 0, "total": 2 },
+      "weeklyHours": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "total": 2
+      },
       "icon": "cellphone",
       "color": "#4FF7A1",
-      "prerequisites": ["Knowledge in basic programming languages"],
+      "prerequisites": [
+        "Knowledge in basic programming languages"
+      ],
       "objectives": "This course introduces students to programming technologies, design and development related to mobile applications. Topics include accessing device capabilities, industry standards, operating systems, and programming for mobile applications using an OS Software Development Kit (SDK). Upon completion, students should be able to create basic applications for mobile devices.",
       "outcomes": [
         {
@@ -1241,8 +1770,6 @@
           "description": "Deploy applications to the Android marketplace for distribution."
         }
       ],
-      "totalModules": 5,
-      "totalTopics": 34,
       "modules": [
         {
           "id": "module-1",
@@ -1251,10 +1778,22 @@
           "hours": 7,
           "title": "Introduction to Android",
           "topics": [
-            { "id": "mad-m1-t1", "title": "The Android Platform" },
-            { "id": "mad-m1-t2", "title": "Android SDK" },
-            { "id": "mad-m1-t3", "title": "Eclipse Installation" },
-            { "id": "mad-m1-t4", "title": "Android Installation" },
+            {
+              "id": "mad-m1-t1",
+              "title": "The Android Platform"
+            },
+            {
+              "id": "mad-m1-t2",
+              "title": "Android SDK"
+            },
+            {
+              "id": "mad-m1-t3",
+              "title": "Eclipse Installation"
+            },
+            {
+              "id": "mad-m1-t4",
+              "title": "Android Installation"
+            },
             {
               "id": "mad-m1-t5",
               "title": "Building your First Android Application"
@@ -1263,7 +1802,10 @@
               "id": "mad-m1-t6",
               "title": "Understanding Anatomy of Android Application"
             },
-            { "id": "mad-m1-t7", "title": "Android Manifest File" }
+            {
+              "id": "mad-m1-t7",
+              "title": "Android Manifest File"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -1277,12 +1819,30 @@
           "hours": 8,
           "title": "Android Application Design Essentials",
           "topics": [
-            { "id": "mad-m2-t1", "title": "Anatomy of an Android Application" },
-            { "id": "mad-m2-t2", "title": "Android Terminologies" },
-            { "id": "mad-m2-t3", "title": "Application Context" },
-            { "id": "mad-m2-t4", "title": "Activities" },
-            { "id": "mad-m2-t5", "title": "Services" },
-            { "id": "mad-m2-t6", "title": "Intents" },
+            {
+              "id": "mad-m2-t1",
+              "title": "Anatomy of an Android Application"
+            },
+            {
+              "id": "mad-m2-t2",
+              "title": "Android Terminologies"
+            },
+            {
+              "id": "mad-m2-t3",
+              "title": "Application Context"
+            },
+            {
+              "id": "mad-m2-t4",
+              "title": "Activities"
+            },
+            {
+              "id": "mad-m2-t5",
+              "title": "Services"
+            },
+            {
+              "id": "mad-m2-t6",
+              "title": "Intents"
+            },
             {
               "id": "mad-m2-t7",
               "title": "Receiving and Broadcasting Intents"
@@ -1291,8 +1851,14 @@
               "id": "mad-m2-t8",
               "title": "Android Manifest File and Its Common Settings"
             },
-            { "id": "mad-m2-t9", "title": "Using Intent Filter" },
-            { "id": "mad-m2-t10", "title": "Permissions" }
+            {
+              "id": "mad-m2-t9",
+              "title": "Using Intent Filter"
+            },
+            {
+              "id": "mad-m2-t10",
+              "title": "Permissions"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -1306,12 +1872,18 @@
           "hours": 7,
           "title": "Android User Interface Design Essentials",
           "topics": [
-            { "id": "mad-m3-t1", "title": "User Interface Screen Elements" },
+            {
+              "id": "mad-m3-t1",
+              "title": "User Interface Screen Elements"
+            },
             {
               "id": "mad-m3-t2",
               "title": "Designing User Interfaces with Layouts"
             },
-            { "id": "mad-m3-t3", "title": "Drawing and Working with Animation" }
+            {
+              "id": "mad-m3-t3",
+              "title": "Drawing and Working with Animation"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -1325,9 +1897,18 @@
           "hours": 7,
           "title": "Testing and Publishing Android Applications",
           "topics": [
-            { "id": "mad-m4-t1", "title": "Testing Android Applications" },
-            { "id": "mad-m4-t2", "title": "Publishing Android Application" },
-            { "id": "mad-m4-t3", "title": "Using Android Preferences" },
+            {
+              "id": "mad-m4-t1",
+              "title": "Testing Android Applications"
+            },
+            {
+              "id": "mad-m4-t2",
+              "title": "Publishing Android Application"
+            },
+            {
+              "id": "mad-m4-t3",
+              "title": "Using Android Preferences"
+            },
             {
               "id": "mad-m4-t4",
               "title": "Managing Application Resources in a Hierarchy"
@@ -1353,14 +1934,26 @@
               "id": "mad-m5-t1",
               "title": "Using Android Data and Storage APIs"
             },
-            { "id": "mad-m5-t2", "title": "Managing Data using SQLite" },
+            {
+              "id": "mad-m5-t2",
+              "title": "Managing Data using SQLite"
+            },
             {
               "id": "mad-m5-t3",
               "title": "Sharing Data between Applications with Content Providers"
             },
-            { "id": "mad-m5-t4", "title": "Using Android Networking APIs" },
-            { "id": "mad-m5-t5", "title": "Using Android Web APIs" },
-            { "id": "mad-m5-t6", "title": "Using Android Telephony APIs" },
+            {
+              "id": "mad-m5-t4",
+              "title": "Using Android Networking APIs"
+            },
+            {
+              "id": "mad-m5-t5",
+              "title": "Using Android Web APIs"
+            },
+            {
+              "id": "mad-m5-t6",
+              "title": "Using Android Telephony APIs"
+            },
             {
               "id": "mad-m5-t7",
               "title": "Deploying Android Application to the World"
@@ -1389,7 +1982,12 @@
       "category": "Minor",
       "credits": 2,
       "studyHours": 36,
-      "weeklyHours": { "L": 2, "T": 0, "P": 0, "total": 2 },
+      "weeklyHours": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "total": 2
+      },
       "icon": "chip",
       "color": "#F74F8E",
       "prerequisites": [
@@ -1425,8 +2023,6 @@
           "description": "Understand and realize the Interfacing of memory & various I/O devices with 8085 microprocessors."
         }
       ],
-      "totalModules": 4,
-      "totalTopics": 28,
       "modules": [
         {
           "id": "module-1",
@@ -1447,8 +2043,14 @@
               "id": "mp-m1-t3",
               "title": "Architecture of 8085 Microprocessor"
             },
-            { "id": "mp-m1-t4", "title": "Pin Description of 8085" },
-            { "id": "mp-m1-t5", "title": "Address/Data Bus De-Multiplexing" },
+            {
+              "id": "mp-m1-t4",
+              "title": "Pin Description of 8085"
+            },
+            {
+              "id": "mp-m1-t5",
+              "title": "Address/Data Bus De-Multiplexing"
+            },
             {
               "id": "mp-m1-t6",
               "title": "Status Signals and the Control Signals"
@@ -1457,7 +2059,10 @@
               "id": "mp-m1-t7",
               "title": "Instruction Set of 8085 Microprocessors"
             },
-            { "id": "mp-m1-t8", "title": "Addressing Modes" },
+            {
+              "id": "mp-m1-t8",
+              "title": "Addressing Modes"
+            },
             {
               "id": "mp-m1-t9",
               "title": "Timing Diagram of the Instructions (a few examples)"
@@ -1479,13 +2084,22 @@
               "id": "mp-m2-t1",
               "title": "Assembly Language Programming with Examples"
             },
-            { "id": "mp-m2-t2", "title": "Counter and Time Delays" },
-            { "id": "mp-m2-t3", "title": "Stack and Subroutine" },
+            {
+              "id": "mp-m2-t2",
+              "title": "Counter and Time Delays"
+            },
+            {
+              "id": "mp-m2-t3",
+              "title": "Stack and Subroutine"
+            },
             {
               "id": "mp-m2-t4",
               "title": "Interrupts of 8085 Processor (Software and Hardware)"
             },
-            { "id": "mp-m2-t5", "title": "I/O Device Interfacing" },
+            {
+              "id": "mp-m2-t5",
+              "title": "I/O Device Interfacing"
+            },
             {
               "id": "mp-m2-t6",
               "title": "I/O Mapped I/O and Memory Mapped I/O"
@@ -1507,16 +2121,34 @@
           "hours": 8,
           "title": "8086 Microprocessor and 8051 Microcontroller",
           "topics": [
-            { "id": "mp-m3-t1", "title": "8086 Microprocessor: Architecture" },
-            { "id": "mp-m3-t2", "title": "8086 Addressing Modes" },
-            { "id": "mp-m3-t3", "title": "8086 Interrupts" },
+            {
+              "id": "mp-m3-t1",
+              "title": "8086 Microprocessor: Architecture"
+            },
+            {
+              "id": "mp-m3-t2",
+              "title": "8086 Addressing Modes"
+            },
+            {
+              "id": "mp-m3-t3",
+              "title": "8086 Interrupts"
+            },
             {
               "id": "mp-m3-t4",
               "title": "Introduction to 8051 Microcontroller: Architecture"
             },
-            { "id": "mp-m3-t5", "title": "8051 Pin Details" },
-            { "id": "mp-m3-t6", "title": "8051 Addressing Modes" },
-            { "id": "mp-m3-t7", "title": "8051 Instruction Set" },
+            {
+              "id": "mp-m3-t5",
+              "title": "8051 Pin Details"
+            },
+            {
+              "id": "mp-m3-t6",
+              "title": "8051 Addressing Modes"
+            },
+            {
+              "id": "mp-m3-t7",
+              "title": "8051 Instruction Set"
+            },
             {
               "id": "mp-m3-t8",
               "title": "Examples of Simple Assembly Language"
@@ -1578,7 +2210,12 @@
       "type": "lab",
       "category": "Major",
       "credits": 1.5,
-      "weeklyHours": { "L": 0, "T": 0, "P": 3, "total": 3 },
+      "weeklyHours": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "total": 3
+      },
       "icon": "server",
       "color": "#3DB8FF",
       "prerequisites": [
@@ -1613,8 +2250,6 @@
           "description": "Understand various advanced queries execution such as relational constraints, joins, set operations, aggregate functions, trigger, views and embedded SQL."
         }
       ],
-      "totalModules": 1,
-      "totalTopics": 16,
       "modules": [
         {
           "id": "module-1",
@@ -1623,7 +2258,10 @@
           "hours": null,
           "title": "Course Contents",
           "topics": [
-            { "id": "dbmslab-t1", "title": "Study of Backend Tool – Oracle" },
+            {
+              "id": "dbmslab-t1",
+              "title": "Study of Backend Tool – Oracle"
+            },
             {
               "id": "dbmslab-t2",
               "title": "Data Definition Language (DDL) Commands in RDBMS"
@@ -1640,8 +2278,14 @@
               "id": "dbmslab-t5",
               "title": "High Level Language Extension with Triggers"
             },
-            { "id": "dbmslab-t6", "title": "Procedures and Functions" },
-            { "id": "dbmslab-t7", "title": "Embedded SQL" },
+            {
+              "id": "dbmslab-t6",
+              "title": "Procedures and Functions"
+            },
+            {
+              "id": "dbmslab-t7",
+              "title": "Embedded SQL"
+            },
             {
               "id": "dbmslab-t8",
               "title": "Database Design using E-R Model and Normalization"
@@ -1700,10 +2344,17 @@
       "type": "lab",
       "category": "Major",
       "credits": 1.5,
-      "weeklyHours": { "L": 0, "T": 0, "P": 3, "total": 3 },
+      "weeklyHours": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "total": 3
+      },
       "icon": "wifi",
       "color": "#FF7B4F",
-      "prerequisites": ["Basic Operating System"],
+      "prerequisites": [
+        "Basic Operating System"
+      ],
       "objectives": "Understanding the basic concept of different network models, explaining the network architecture, apply different computer routing algorithms in real life problems.",
       "outcomes": [
         {
@@ -1732,8 +2383,6 @@
           "description": "Apply the basics of networking protocols for solving real life networking problems."
         }
       ],
-      "totalModules": 1,
-      "totalTopics": 10,
       "modules": [
         {
           "id": "module-1",
@@ -1778,7 +2427,10 @@
               "id": "cnlab-t9",
               "title": "TCP/UDP Socket Programming: Simple, TCP Based, UDP Based Multicast & Broadcast Sockets"
             },
-            { "id": "cnlab-t10", "title": "CISCO Packet Tracer Example" }
+            {
+              "id": "cnlab-t10",
+              "title": "CISCO Packet Tracer Example"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -1803,7 +2455,12 @@
       "type": "lab",
       "category": "Major",
       "credits": 1,
-      "weeklyHours": { "L": 0, "T": 0, "P": 2, "total": 2 },
+      "weeklyHours": {
+        "L": 0,
+        "T": 0,
+        "P": 2,
+        "total": 2
+      },
       "icon": "console",
       "color": "#B44FF7",
       "prerequisites": [
@@ -1839,8 +2496,6 @@
           "description": "Implement algorithm to solve problems by branch and bound approach."
         }
       ],
-      "totalModules": 1,
-      "totalTopics": 12,
       "modules": [
         {
           "id": "module-1",
@@ -1918,7 +2573,12 @@
       "type": "lab",
       "category": "Major",
       "credits": 1.5,
-      "weeklyHours": { "L": 0, "T": 0, "P": 3, "total": 3 },
+      "weeklyHours": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "total": 3
+      },
       "icon": "lightning-bolt-outline",
       "color": "#F7D44F",
       "prerequisites": [
@@ -1949,8 +2609,6 @@
           "description": "Develop ideas and propose expert systems offering solutions to the challenging problems of Artificial Intelligence."
         }
       ],
-      "totalModules": 1,
-      "totalTopics": 12,
       "modules": [
         {
           "id": "module-1",
@@ -2031,7 +2689,12 @@
       "type": "lab",
       "category": "Minor",
       "credits": 1,
-      "weeklyHours": { "L": 0, "T": 0, "P": 2, "total": 2 },
+      "weeklyHours": {
+        "L": 0,
+        "T": 0,
+        "P": 2,
+        "total": 2
+      },
       "icon": "web",
       "color": "#4FF7E0",
       "prerequisites": [
@@ -2068,8 +2731,6 @@
           "description": "Apply different tools used in ERP."
         }
       ],
-      "totalModules": 1,
-      "totalTopics": 13,
       "modules": [
         {
           "id": "module-1",
@@ -2106,8 +2767,14 @@
               "id": "eclab-t7",
               "title": "Online Banking and Credit Card Transaction Processing"
             },
-            { "id": "eclab-t8", "title": "Comparison Shopping in B2C" },
-            { "id": "eclab-t9", "title": "Exchanges Handling in B2B" },
+            {
+              "id": "eclab-t8",
+              "title": "Comparison Shopping in B2C"
+            },
+            {
+              "id": "eclab-t9",
+              "title": "Exchanges Handling in B2B"
+            },
             {
               "id": "eclab-t10",
               "title": "Interaction Examples: Virtual Shopping Carts"
@@ -2120,7 +2787,10 @@
               "id": "eclab-t12",
               "title": "Executing Query Join: Cross Joins, Inner Joins, Outer Joins, Self Joins"
             },
-            { "id": "eclab-t13", "title": "PHP MVC Application Development" }
+            {
+              "id": "eclab-t13",
+              "title": "PHP MVC Application Development"
+            }
           ],
           "resources": [],
           "notes": [],
@@ -2128,8 +2798,12 @@
           "pyqs": []
         }
       ],
-      "books": ["PhP Complete Reference Steven Holzner."],
-      "references": ["Programming PHP Kevin Tatroe."]
+      "books": [
+        "PhP Complete Reference Steven Holzner."
+      ],
+      "references": [
+        "Programming PHP Kevin Tatroe."
+      ]
     },
     {
       "id": "mad-lab",
@@ -2138,10 +2812,17 @@
       "type": "lab",
       "category": "Minor",
       "credits": 1,
-      "weeklyHours": { "L": 0, "T": 0, "P": 2, "total": 2 },
+      "weeklyHours": {
+        "L": 0,
+        "T": 0,
+        "P": 2,
+        "total": 2
+      },
       "icon": "cellphone-cog",
       "color": "#4FF77B",
-      "prerequisites": ["Basic knowledge on programming and database concepts"],
+      "prerequisites": [
+        "Basic knowledge on programming and database concepts"
+      ],
       "objectives": "This is a practical course on Mobile Application Development and student will learn how to program in Android Platform and develop applications using SQLite that run on Android Operating System.",
       "outcomes": [
         {
@@ -2170,8 +2851,6 @@
           "description": "Develop mobile applications using SQLite."
         }
       ],
-      "totalModules": 1,
-      "totalTopics": 11,
       "modules": [
         {
           "id": "module-1",
@@ -2245,10 +2924,17 @@
       "type": "lab",
       "category": "Minor",
       "credits": 1,
-      "weeklyHours": { "L": 0, "T": 0, "P": 2, "total": 2 },
+      "weeklyHours": {
+        "L": 0,
+        "T": 0,
+        "P": 2,
+        "total": 2
+      },
       "icon": "chip",
       "color": "#FF4F9A",
-      "prerequisites": ["Basic Knowledge of Digital Electronics"],
+      "prerequisites": [
+        "Basic Knowledge of Digital Electronics"
+      ],
       "objectives": "To apply Assembly Level Programming for arithmetic-logical solutions and also to interpret the interfacing programming by conducting experiments.",
       "outcomes": [
         {
@@ -2277,8 +2963,6 @@
           "description": "Test fundamental of 8051 programs using the trainer kit."
         }
       ],
-      "totalModules": 1,
-      "totalTopics": 7,
       "modules": [
         {
           "id": "module-1",
@@ -2340,14 +3024,17 @@
       "type": "project",
       "category": "Project",
       "credits": 1,
-      "weeklyHours": { "L": 0, "T": 0, "P": 0, "total": 2 },
+      "weeklyHours": {
+        "L": 0,
+        "T": 0,
+        "P": 0,
+        "total": 2
+      },
       "icon": "rocket-outline",
       "color": "#A0A0A0",
       "prerequisites": [],
       "objectives": "Independent minor project to be completed by the student.",
       "outcomes": [],
-      "totalModules": 0,
-      "totalTopics": 0,
       "modules": [],
       "books": [],
       "references": []
