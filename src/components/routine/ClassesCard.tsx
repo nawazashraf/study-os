@@ -1,5 +1,6 @@
 import { routine } from "@/data/routine";
 import { useAttendance } from "@/hooks/useAttendance";
+import { getRoutineClassUnits } from "@/utils/getRoutineClassUnits";
 import { Text, View } from "react-native";
 
 type Props = {
@@ -14,15 +15,22 @@ export const ClassesCard = ({ selectedDate, attendance }: Props) => {
 
   const classes = routine[day] ?? [];
 
-  //removing recess
   const actualClasses = classes.filter((item) => item.subject !== "Recess");
 
-  const attended = actualClasses.filter(
-    (item) => attendance.getStatus(item.id) === "present",
-  ).length;
+  const attendedUnits = actualClasses.reduce((sum, item) => {
+    if (attendance.getStatus(item.id) === "present") {
+      return sum + getRoutineClassUnits(item);
+    }
+    return sum;
+  }, 0);
+
+  const totalUnits = actualClasses.reduce(
+    (sum, item) => sum + getRoutineClassUnits(item),
+    0,
+  );
 
   const attendancePercent =
-    actualClasses.length === 0 ? 0 : (attended / actualClasses.length) * 100;
+    totalUnits === 0 ? 0 : (attendedUnits / totalUnits) * 100;
 
   return (
     <View className="bg-surface w-[48%] h-24 rounded-3xl px-6 py-1 justify-center">
@@ -31,7 +39,7 @@ export const ClassesCard = ({ selectedDate, attendance }: Props) => {
       </Text>
 
       <Text className="text-2xl text-white">
-        {attended}/{actualClasses.length}
+        {attendedUnits}/{totalUnits}
       </Text>
 
       <View className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-zinc-700">

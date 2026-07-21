@@ -233,8 +233,18 @@
 //   saturday: [],
 // };
 
-//! SEM 5
-export const routine = {
+export interface RoutineClass {
+  id: number;
+  subject: string;
+  teacher: string;
+  room: string;
+  start: string;
+  end: string;
+  color: string;
+  batch?: string;
+}
+
+export const routine: Record<string, RoutineClass[]> = {
   monday: [
     {
       id: 1,
@@ -243,7 +253,7 @@ export const routine = {
       room: "NB503",
       start: "10:30",
       end: "11:30",
-      color: "#3B82F6",
+      color: "#2563EB",
     },
     {
       id: 2,
@@ -252,7 +262,7 @@ export const routine = {
       room: "NB503",
       start: "11:30",
       end: "12:30",
-      color: "#8B5CF6",
+      color: "#7C3AED",
     },
     {
       id: 3,
@@ -261,16 +271,16 @@ export const routine = {
       room: "",
       start: "12:30",
       end: "1:30",
-      color: "#9CA3AF",
+      color: "#52525B",
     },
     {
       id: 4,
-      subject: "Mobile Application Development",
+      subject: "E-Commerce",
       teacher: "KR",
       room: "NB503",
       start: "1:30",
       end: "2:30",
-      color: "#10B981",
+      color: "#16A34A",
     },
   ],
 
@@ -281,8 +291,8 @@ export const routine = {
       teacher: "SCH, AKR",
       room: "NB402",
       start: "9:30",
-      end: "10:30",
-      color: "#EF4444",
+      end: "11:30",
+      color: "#EA580C",
     },
     {
       id: 6,
@@ -291,7 +301,7 @@ export const routine = {
       room: "NB503",
       start: "11:30",
       end: "12:30",
-      color: "#F97316",
+      color: "#EA580C",
     },
     {
       id: 7,
@@ -300,7 +310,7 @@ export const routine = {
       room: "NB503",
       start: "12:30",
       end: "1:30",
-      color: "#F97316",
+      color: "#EA580C",
     },
     {
       id: 8,
@@ -309,7 +319,7 @@ export const routine = {
       room: "",
       start: "1:30",
       end: "2:30",
-      color: "#9CA3AF",
+      color: "#52525B",
     },
     {
       id: 9,
@@ -318,7 +328,7 @@ export const routine = {
       room: "NB503",
       start: "2:30",
       end: "3:30",
-      color: "#8B5CF6",
+      color: "#7C3AED",
     },
     {
       id: 10,
@@ -327,7 +337,7 @@ export const routine = {
       room: "NB304",
       start: "3:30",
       end: "5:30",
-      color: "#06B6D4",
+      color: "#0891B2",
     },
   ],
 
@@ -339,7 +349,7 @@ export const routine = {
       room: "NB503",
       start: "9:30",
       end: "10:30",
-      color: "#10B981",
+      color: "#16A34A",
     },
     {
       id: 12,
@@ -348,7 +358,7 @@ export const routine = {
       room: "NB503",
       start: "10:30",
       end: "11:30",
-      color: "#F97316",
+      color: "#EA580C",
     },
     {
       id: 13,
@@ -357,7 +367,7 @@ export const routine = {
       room: "NB503",
       start: "11:30",
       end: "12:30",
-      color: "#14B8A6",
+      color: "#0D9488",
     },
     {
       id: 14,
@@ -366,7 +376,7 @@ export const routine = {
       room: "",
       start: "12:30",
       end: "1:30",
-      color: "#9CA3AF",
+      color: "#52525B",
     },
     {
       id: 15,
@@ -375,7 +385,7 @@ export const routine = {
       room: "NB503",
       start: "1:30",
       end: "3:30",
-      color: "#22C55E",
+      color: "#15803D",
     },
     {
       id: 16,
@@ -384,7 +394,7 @@ export const routine = {
       room: "NB503",
       start: "3:30",
       end: "4:30",
-      color: "#3B82F6",
+      color: "#2563EB",
     },
   ],
 
@@ -395,8 +405,8 @@ export const routine = {
       teacher: "AG, KR",
       room: "NB405",
       start: "9:30",
-      end: "10:30",
-      color: "#22C55E",
+      end: "11:30",
+      color: "#15803D",
     },
     {
       id: 18,
@@ -405,7 +415,7 @@ export const routine = {
       room: "NB503",
       start: "11:30",
       end: "12:30",
-      color: "#14B8A6",
+      color: "#0D9488",
     },
     {
       id: 19,
@@ -414,7 +424,7 @@ export const routine = {
       room: "",
       start: "12:30",
       end: "1:30",
-      color: "#9CA3AF",
+      color: "#52525B",
     },
     {
       id: 20,
@@ -423,7 +433,7 @@ export const routine = {
       room: "NB503",
       start: "2:30",
       end: "3:30",
-      color: "#10B981",
+      color: "#16A34A",
     },
     {
       id: 21,
@@ -431,8 +441,8 @@ export const routine = {
       teacher: "MM, SNM",
       room: "NB304",
       start: "3:30",
-      end: "4:30",
-      color: "#06B6D4",
+      end: "5:30",
+      color: "#0891B2",
     },
   ],
 
@@ -443,62 +453,44 @@ export const routine = {
       teacher: "RNP",
       room: "NB508",
       start: "9:30",
-      end: "10:30",
-      color: "#A855F7",
+      end: "11:30",
+      color: "#9333EA",
     },
     {
       id: 23,
-      subject: "Design and Analysis of Algorithm Lab",
-      teacher: "AR, SM",
-      room: "NB307",
-      start: "9:30",
-      end: "10:30",
-      color: "#EC4899",
-    },
-    {
-      id: 24,
       subject: "Database Management System",
       teacher: "SNM",
       room: "NB503",
       start: "11:30",
       end: "12:30",
-      color: "#3B82F6",
+      color: "#2563EB",
     },
     {
-      id: 25,
+      id: 24,
       subject: "Recess",
       teacher: "",
       room: "",
       start: "12:30",
       end: "1:30",
-      color: "#9CA3AF",
+      color: "#52525B",
     },
     {
-      id: 26,
+      id: 25,
       subject: "Design and Analysis of Algorithm",
       teacher: "SM",
       room: "NB503",
       start: "1:30",
       end: "2:30",
-      color: "#8B5CF6",
+      color: "#7C3AED",
     },
     {
-      id: 27,
+      id: 26,
       subject: "Computer Networking",
       teacher: "SC",
       room: "NB503",
       start: "2:30",
       end: "3:30",
-      color: "#14B8A6",
-    },
-    {
-      id: 28,
-      subject: "Computer Networking Lab",
-      teacher: "SCH",
-      room: "NB402",
-      start: "3:30",
-      end: "5:30",
-      color: "#A855F7",
+      color: "#0D9488",
     },
   ],
 

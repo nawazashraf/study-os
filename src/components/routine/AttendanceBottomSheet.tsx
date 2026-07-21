@@ -218,6 +218,17 @@ const AttendanceBottomSheet = forwardRef<BottomSheet, Props>(
                     {currentStatus === "present" ? "Absent" : "Present"}
                   </Text>
                 </Pressable>
+                <Pressable
+                  onPress={() => {
+                    if (!routineClass) return;
+                    attendance.clear(routineClass.id);
+                  }}
+                  className="mt-3 rounded-2xl border border-red-500/30 bg-transparent py-3"
+                >
+                  <Text className="text-center font-semibold text-red-400">
+                    Clear attendance
+                  </Text>
+                </Pressable>
               </View>
             )}
           </View>

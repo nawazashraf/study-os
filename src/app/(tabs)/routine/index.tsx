@@ -5,24 +5,25 @@ import { RoutineList } from "@/components/routine/RoutineList";
 import { RoutineWeek } from "@/components/routine/RoutineWeek";
 import { routine } from "@/data/routine";
 import { useAttendance } from "@/hooks/useAttendance";
-import { getCurrentWeek } from "@/utils/generateCurrentWeek";
+import { getWeekForDate } from "@/utils/generateCurrentWeek";
 import { getFormattedDate } from "@/utils/getFormattedDate";
 import { getGreeting } from "@/utils/getGreeting";
 import { Ionicons } from "@expo/vector-icons";
 import BottomSheet from "@gorhom/bottom-sheet";
 import { useRef, useState } from "react";
-import { Text, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const Routine = () => {
-    
   const userName = "Nawaz";
   const bottomSheetRef = useRef<BottomSheet>(null);
 
-  const currentWeek = getCurrentWeek();
+  const [referenceDate, setReferenceDate] = useState(new Date());
+
+  const currentWeek = getWeekForDate(referenceDate);
 
   const [selectedDate, setSelectedDate] = useState(
-    currentWeek.find((d) => d.isToday)?.date ?? new Date(),
+    currentWeek.find((d) => d.isToday)?.date ?? currentWeek[0].date,
   );
 
   const day = selectedDate
@@ -76,6 +77,37 @@ const Routine = () => {
               selectedDate={selectedDate}
               onSelect={setSelectedDate}
             />
+            <View className="mt-3 flex-row items-center justify-center gap-4">
+              <Pressable
+                onPress={() => {
+                  const newRef = new Date(referenceDate);
+                  newRef.setDate(newRef.getDate() - 7);
+                  setReferenceDate(newRef);
+                  const wk = getWeekForDate(newRef);
+                  setSelectedDate(wk[0].date);
+                }}
+                className="px-3 py-2 rounded-2xl bg-surface"
+              >
+                <Ionicons name="chevron-back" size={18} color="#fff" />
+              </Pressable>
+
+              <Text className="text-sm text-zinc-400">
+                Week of {currentWeek[0].date.toLocaleDateString()}
+              </Text>
+
+              <Pressable
+                onPress={() => {
+                  const newRef = new Date(referenceDate);
+                  newRef.setDate(newRef.getDate() + 7);
+                  setReferenceDate(newRef);
+                  const wk = getWeekForDate(newRef);
+                  setSelectedDate(wk[0].date);
+                }}
+                className="px-3 py-2 rounded-2xl bg-surface"
+              >
+                <Ionicons name="chevron-forward" size={18} color="#fff" />
+              </Pressable>
+            </View>
           </View>
 
           {/* Routine */}
@@ -85,6 +117,14 @@ const Routine = () => {
               classes={classes}
               onClassPress={(item) => {
                 setSelectedClass(item);
+                // Do not open attendance sheet for recess entries
+                if (
+                  (item.subject ?? "").toString().trim().toLowerCase() ===
+                  "recess"
+                ) {
+                  return;
+                }
+
                 bottomSheetRef.current?.snapToIndex(0);
               }}
             />
