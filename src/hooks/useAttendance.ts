@@ -29,22 +29,8 @@ export const useAttendance = (date: string) => {
 
   const clear = (routineId: number) => {
     try {
-      // remove attendance record for this routine on the selected date
-      // imported from attendanceService
-      // eslint-disable-next-line @typescript-eslint/no-use-before-define
-      // call clearAttendance and refresh
-      // (clearAttendance imported below)
-      // implemented synchronously in DB layer
-      // to keep API simple for UI calls
-      //
-      // Note: clearAttendance is synchronous as db.runSync is used.
-      // If it were async we'd await it and make this function async.
-      //
-      // perform clear
-      // @ts-ignore - will be available
       clearAttendance(date, routineId);
     } catch (e) {
-      // ignore
     }
     refresh();
   };

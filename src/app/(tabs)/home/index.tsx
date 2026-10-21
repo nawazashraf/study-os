@@ -8,8 +8,9 @@ import { activityService } from "@/database/activityService";
 import type { Activity } from "@/types/activity";
 import { getFormattedDate } from "@/utils/getFormattedDate";
 import { getGreeting } from "@/utils/getGreeting";
+import { getUserName } from "@/utils/userPreferences";
 import { useFocusEffect, useRouter } from "expo-router";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { FlatList, Pressable, RefreshControl, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -20,8 +21,19 @@ export default function Index() {
   const [studyDuration, setStudyDuration] = useState(0);
   const [streak, setStreak] = useState(0);
   const [refreshing, setRefreshing] = useState(false);
+  const [userName, setUserNameState] = useState<string | null>(null);
 
   const bottomOffset = 88;
+
+  useEffect(() => {
+    getUserName().then((name) => {
+      if (!name) {
+        router.replace("/onboarding");
+        return;
+      }
+      setUserNameState(name);
+    });
+  }, [router]);
 
   const loadData = useCallback(async () => {
     const today = new Date().toISOString().split("T")[0];
@@ -70,7 +82,7 @@ export default function Index() {
 
             <View className="mb-6">
               <Text className="text-3xl font-bold text-text">
-                {getGreeting()}
+                {userName ? `Hello, ${userName}` : getGreeting()}
               </Text>
 
               <View className="mt-2 flex-row items-center justify-between">

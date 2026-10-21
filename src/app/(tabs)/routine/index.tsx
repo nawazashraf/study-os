@@ -8,15 +8,24 @@ import { useAttendance } from "@/hooks/useAttendance";
 import { getWeekForDate } from "@/utils/generateCurrentWeek";
 import { getFormattedDate } from "@/utils/getFormattedDate";
 import { getGreeting } from "@/utils/getGreeting";
+import { getUserName } from "@/utils/userPreferences";
 import { Ionicons } from "@expo/vector-icons";
 import BottomSheet from "@gorhom/bottom-sheet";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Pressable, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const Routine = () => {
-  const userName = "Nawaz";
+  const [userName, setUserNameState] = useState("Nawaz");
   const bottomSheetRef = useRef<BottomSheet>(null);
+
+  useEffect(() => {
+    getUserName().then((savedName) => {
+      if (savedName) {
+        setUserNameState(savedName);
+      }
+    });
+  }, []);
 
   const [referenceDate, setReferenceDate] = useState(new Date());
 
